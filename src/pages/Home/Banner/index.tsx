@@ -3,8 +3,8 @@ import styles from './index.less';
 
 const Banner = () => {
   useEffect(() => {
-    debugger;
-    gsap.registerPlugin(SplitText);
+    // debugger;
+    // gsap.registerPlugin(SplitText);
 
     let webgl = {};
     let tail = {};
@@ -799,34 +799,34 @@ const Banner = () => {
       );
       tl.call(
         () => {
-          webgl.quoteText.innerHTML = opt.quote;
-          gsap.set(webgl.quoteText, {
-            rotation: 180,
-            opacity: 1,
-            transformOrigin: 'center',
-          });
-          let split = new SplitText('.quoteText', {
-            type: 'lines,words,chars',
-          });
-          if (!opt.stagger) opt.stagger = 0.3;
-          if (opt.a4) {
-            webgl.texturaAnimation5 = gsap.from(split.words, {
-              duration: 0.5,
-              y: 100,
-              rotationX: -60,
-              stagger: opt.stagger,
-            });
-          } else {
-            gsap.set('.quoteText', { perspective: 400 });
-            gsap.from(split.lines, {
-              duration: 0.5,
-              opacity: 0,
-              rotationX: -60,
-              force3D: true,
-              transformOrigin: '0 center -150',
-              stagger: opt.stagger,
-            });
-          }
+          // webgl.quoteText.innerHTML = opt.quote;
+          // gsap.set(webgl.quoteText, {
+          //   rotation: 180,
+          //   opacity: 1,
+          //   transformOrigin: 'center',
+          // });
+          // let split = new SplitText('.quoteText', {
+          //   type: 'lines,words,chars',
+          // });
+          // if (!opt.stagger) opt.stagger = 0.3;
+          // if (opt.a4) {
+          //   webgl.texturaAnimation5 = gsap.from(split.words, {
+          //     duration: 0.5,
+          //     y: 100,
+          //     rotationX: -60,
+          //     stagger: opt.stagger,
+          //   });
+          // } else {
+          //   gsap.set('.quoteText', { perspective: 400 });
+          //   gsap.from(split.lines, {
+          //     duration: 0.5,
+          //     opacity: 0,
+          //     rotationX: -60,
+          //     force3D: true,
+          //     transformOrigin: '0 center -150',
+          //     stagger: opt.stagger,
+          //   });
+          // }
         },
         null,
         0.5,
