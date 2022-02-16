@@ -1,207 +1,142 @@
 .cardhover {
-  height: 100vh;
   :global {
-    .page-content {
-      display: grid;
-      grid-gap: 1rem;
-      padding: 1rem;
-      max-width: 1024px;
-      margin: 0 auto;
-      font-family: var(--font-sans);
+    @hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+    @returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    .title {
+      font-family: 'Raleway';
+      font-size: 24px;
+      font-weight: 700;
+      color: #5d4037;
+      text-align: center;
     }
 
-    @media (min-width: 600px) {
-      .page-content {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    p {
+      line-height: 1.5em;
+    }
+    h1 {
+      color: #fff;
     }
 
-    @media (min-width: 800px) {
-      .page-content {
-        grid-template-columns: repeat(4, 1fr);
+    h1 + p,
+    p + p {
+      margin-top: 10px;
+    }
+
+    .container {
+      padding: 40px 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card-wrap {
+      margin: 10px;
+      transform: perspective(800px);
+      transform-style: preserve-3d;
+      cursor: pointer;
+      // background-color: #fff;
+
+      &:hover {
+        .card-info {
+          transform: translateY(0);
+        }
+        .card-info p {
+          opacity: 1;
+        }
+        .card-info,
+        .card-info p {
+          transition: 0.6s @hoverEasing;
+        }
+        .card-info:after {
+          transition: 5s @hoverEasing;
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .card-bg {
+          transition: 0.6s @hoverEasing, opacity 5s @hoverEasing;
+          opacity: 0.8;
+        }
+        .card {
+          transition: 0.6s @hoverEasing, box-shadow 2s @hoverEasing;
+          box-shadow: rgba(white, 0.2) 0 0 40px 5px, rgba(white, 1) 0 0 0 1px,
+            rgba(black, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+            inset white 0 0 0 6px;
+        }
       }
     }
 
     .card {
       position: relative;
-      display: flex;
-      align-items: flex-end;
+      flex: 0 0 240px;
+      width: 240px;
+      height: 320px;
+      background-color: #333;
       overflow: hidden;
-      padding: 1rem;
-      width: 100%;
-      text-align: center;
-      color: whitesmoke;
-      background-color: whitesmoke;
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
-        0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
-        0 16px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: rgba(black, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px,
+        inset rgba(white, 0.5) 0 0 0 6px;
+      transition: 1s @returnEasing;
     }
 
-    @media (min-width: 600px) {
-      .card {
-        height: 350px;
-      }
-    }
-
-    .card:before {
-      content: '';
+    .card-bg {
+      opacity: 0.5;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 110%;
+      top: -20px;
+      left: -20px;
+      width: 120%;
+      height: 120%;
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: cover;
-      background-position: 0 0;
-      transition: transform calc(var(--d) * 1.5) var(--e);
+      transition: 1s @returnEasing, opacity 5s 1s @returnEasing;
       pointer-events: none;
     }
 
-    .card:after {
-      content: '';
-      display: block;
+    .card-info {
+      padding: 20px;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 200%;
-      pointer-events: none;
-      background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.009) 11.7%,
-        rgba(0, 0, 0, 0.034) 22.1%,
-        rgba(0, 0, 0, 0.072) 31.2%,
-        rgba(0, 0, 0, 0.123) 39.4%,
-        rgba(0, 0, 0, 0.182) 46.6%,
-        rgba(0, 0, 0, 0.249) 53.1%,
-        rgba(0, 0, 0, 0.32) 58.9%,
-        rgba(0, 0, 0, 0.394) 64.3%,
-        rgba(0, 0, 0, 0.468) 69.3%,
-        rgba(0, 0, 0, 0.54) 74.1%,
-        rgba(0, 0, 0, 0.607) 78.8%,
-        rgba(0, 0, 0, 0.668) 83.6%,
-        rgba(0, 0, 0, 0.721) 88.7%,
-        rgba(0, 0, 0, 0.762) 94.1%,
-        rgba(0, 0, 0, 0.79) 100%
-      );
-      transform: translateY(-50%);
-      transition: transform calc(var(--d) * 2) var(--e);
-    }
+      bottom: 0;
+      color: #fff;
+      transform: translateY(40%);
+      transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 
-    .card:nth-child(1):before {
-      background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    }
-
-    .card:nth-child(2):before {
-      background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    }
-
-    .card:nth-child(3):before {
-      background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    }
-
-    .card:nth-child(4):before {
-      background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    }
-
-    .content {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 1rem;
-      transition: transform var(--d) var(--e);
-      z-index: 1;
-    }
-
-    .content > * + * {
-      margin-top: 1rem;
-    }
-
-    .title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-
-    .copy {
-      font-family: var(--font-serif);
-      font-size: 1.125rem;
-      font-style: italic;
-      line-height: 1.35;
-    }
-
-    .btn {
-      cursor: pointer;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 0.65rem;
-      font-weight: bold;
-      letter-spacing: 0.025rem;
-      text-transform: uppercase;
-      color: white;
-      background-color: black;
-      border: none;
-    }
-
-    .btn:hover {
-      background-color: #0d0d0d;
-    }
-
-    .btn:focus {
-      outline: 1px dashed yellow;
-      outline-offset: 3px;
-    }
-
-    @media (hover: hover) and (min-width: 600px) {
-      .card:after {
-        transform: translateY(0);
-      }
-
-      .content {
-        transform: translateY(calc(100% - 4.5rem));
-      }
-
-      .content > *:not(.title) {
+      p {
         opacity: 0;
-        transform: translateY(1rem);
-        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        text-shadow: rgba(black, 1) 0 2px 3px;
+        transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
 
-      .card:hover,
-      .card:focus-within {
-        align-items: center;
+      * {
+        position: relative;
+        z-index: 1;
       }
 
-      .card:hover:before,
-      .card:focus-within:before {
-        transform: translateY(-4%);
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(#000, 0.6) 100%
+        );
+        background-blend-mode: overlay;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 5s 1s @returnEasing;
       }
+    }
 
-      .card:hover:after,
-      .card:focus-within:after {
-        transform: translateY(-50%);
-      }
-
-      .card:hover .content,
-      .card:focus-within .content {
-        transform: translateY(0);
-      }
-
-      .card:hover .content > *:not(.title),
-      .card:focus-within .content > *:not(.title) {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: calc(var(--d) / 8);
-      }
-
-      .card:focus-within:before,
-      .card:focus-within:after,
-      .card:focus-within .content,
-      .card:focus-within .content > *:not(.title) {
-        transition-duration: 0s;
-      }
+    .card-info h1 {
+      font-family: 'Playfair Display';
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: rgba(black, 0.5) 0 10px 10px;
     }
   }
 }
