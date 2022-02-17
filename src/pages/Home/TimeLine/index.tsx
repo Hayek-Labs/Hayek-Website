@@ -1,7 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './index.less';
 
 const TimeLine = () => {
+  const firstRef = useRef();
+  useEffect(() => {
+    if (firstRef.current) {
+      firstRef.current.click();
+    }
+  }, []);
   return (
     <div className={styles.timeline}>
       <h2>CSS3 Timeline</h2>
@@ -16,10 +22,10 @@ const TimeLine = () => {
             id="work5"
             name="works"
             type="radio"
-            checked
+            ref={firstRef}
           />
           <div className="relative">
-            <label for="work5">Lorem ipsum dolor sit amet</label>
+            <label htmlFor="work5">Lorem ipsum dolor sit amet</label>
             <span className="date">12 May 2013</span>
             <span className="circle"></span>
           </div>
@@ -37,7 +43,7 @@ const TimeLine = () => {
         <li className="work">
           <input className="radio" id="work4" name="works" type="radio" />
           <div className="relative">
-            <label for="work4">Lorem ipsum dolor sit amet</label>
+            <label htmlFor="work4">Lorem ipsum dolor sit amet</label>
             <span className="date">11 May 2013</span>
             <span className="circle"></span>
           </div>
@@ -55,7 +61,7 @@ const TimeLine = () => {
         <li className="work">
           <input className="radio" id="work3" name="works" type="radio" />
           <div className="relative">
-            <label for="work3">Lorem ipsum dolor sit amet</label>
+            <label htmlFor="work3">Lorem ipsum dolor sit amet</label>
             <span className="date">10 May 2013</span>
             <span className="circle"></span>
           </div>
@@ -73,7 +79,7 @@ const TimeLine = () => {
         <li className="work">
           <input className="radio" id="work2" name="works" type="radio" />
           <div className="relative">
-            <label for="work2">Lorem ipsum dolor sit amet</label>
+            <label htmlFor="work2">Lorem ipsum dolor sit amet</label>
             <span className="date">09 May 2013</span>
             <span className="circle"></span>
           </div>
@@ -91,7 +97,7 @@ const TimeLine = () => {
         <li className="work">
           <input className="radio" id="work1" name="works" type="radio" />
           <div className="relative">
-            <label for="work1">Lorem ipsum dolor sit amet</label>
+            <label htmlFor="work1">Lorem ipsum dolor sit amet</label>
             <span className="date">08 May 2013</span>
             <span className="circle"></span>
           </div>
