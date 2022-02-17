@@ -3,7 +3,9 @@
   padding: 0;
 }
 
-html,
+html {
+  overflow: hidden;
+}
 body {
   overflow-x: hidden;
 }
@@ -410,5 +412,24 @@ body {
 
   100% {
     transform: translate3d(830px, 800px, 2px) rotate(-360deg);
+  }
+}
+
+// Animation
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes scaleUpBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
