@@ -4,6 +4,8 @@ import PrettySticky from './PrettySticky';
 import TimeLine from './TimeLine';
 import Second from './Second';
 import TextFillingWithWater from './TextFillingWithWater';
+import Footer from './Footer';
+import Button from './Button';
 export default function IndexPage() {
   return (
     <div>
@@ -12,7 +14,9 @@ export default function IndexPage() {
       <Second />
       <PrettySticky />
       <TimeLine />
-      <TextFillingWithWater />
+      {/* <TextFillingWithWater /> */}
+      <Footer />
+      <Button />
     </div>
   );
 }
