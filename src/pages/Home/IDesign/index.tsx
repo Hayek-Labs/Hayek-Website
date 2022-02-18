@@ -5,7 +5,7 @@ const IDesign = () => {
   return (
     <div className={styles.idesign}>
       <svg
-        class="anchorBezierSVG"
+        className="anchorBezierSVG"
         viewBox="0 0 800 200"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid meet"
@@ -27,7 +27,7 @@ const IDesign = () => {
           <mask id="mainMask">
             <rect width="100%" height="100%" fill="#000" />
             <path
-              class="mainLineMask"
+              className="mainLineMask"
               fill="#FFF"
               stroke="none"
               stroke-miterlimit="10"
@@ -37,7 +37,7 @@ const IDesign = () => {
           <mask id="mainMaskInverse">
             <rect width="100%" height="100%" fill="#FFF" />
             <path
-              class="mainLineMask"
+              className="mainLineMask"
               fill="#000"
               stroke="none"
               stroke-miterlimit="10"
@@ -46,12 +46,12 @@ const IDesign = () => {
           </mask>
         </defs>
         <g mask="url(#mainMask)">
-          <text class="maskText1" x="50%" y="60%" style="fill:#ededed;">
+          <text className="maskText1" x="50%" y="60%" style="fill:#ededed;">
             I DESIGN
           </text>
         </g>
         <g mask="url(#mainMaskInverse)">
-          <text class="maskText2" x="50%" y="60%" style="fill:#5783FC;">
+          <text className="maskText2" x="50%" y="60%" style="fill:#5783FC;">
             WITH
           </text>
         </g>
@@ -64,7 +64,7 @@ const IDesign = () => {
           d="M148,122.1c133-87.1,377-87.8,504,0"
         />
         <path
-          class="mainLineStart"
+          className="mainLineStart"
           stroke-linecap="round"
           fill="none"
           stroke="#5783FC"
