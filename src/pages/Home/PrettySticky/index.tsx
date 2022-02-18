@@ -8,26 +8,16 @@ const PrettySticky = () => {
         <h1 className="center">Kidnapping The Princess</h1>
 
         <article className="episode">
-          <div className="episode__number">00</div>
+          <div className="episode__number"></div>
           <div className="episode__content">
             <div className="title">Prologue</div>
             <div className="story">
-              <p>
-                Say hello to the perfection of Cybele- tall, gorgeous,
-                millionaire. She’s a supermodel by day and a kidnapper
-                extraordinaire at night. When she took Princess Talia from the
-                castle one night, the whole country was sent into chaos.
-              </p>
+              <p>Say hello to the perfection of Cybele- tall, gorgeous,</p>
               <p>
                 Princess Talia was the only successor to the throne, and her
-                absence baffled the kingdom. Nobody knew that Cybele was the
-                culprit, and no one would be able to guess her reason for it.
-                Only she knew.
               </p>
               <p>
                 Watch Cybele, both our hero and villain for the story as she
-                struggles to fulfill her wishes while trying to keep her
-                feelings for the Princess in check.
               </p>
             </div>
           </div>
@@ -53,29 +43,16 @@ const PrettySticky = () => {
               <p>
                 Oooh! How lovely. As if her mother the queen could help her
                 right now. This one was charming. It almost made me want to let
-                go of her. Ha ha! As if. All that planning to infiltrate the
-                castle and kidnap her would not go to waste. But while she was
-                in my possession, I might as well have a little fun with her.
               </p>
               <p>
                 "I doubt your highness will spare my life if I let you go," I
-                said to her. She stopped squirming in an instant. "You're a
-                girl?" she asked with bathed breath. The corner of my mouth
-                perked up into a smirk. "Last time I checked yes," I told her.
               </p>
               <p>
                 "What do you want from me? Do you want money? Power? Men? I can
                 give you all of that." She tried to sit but it was too much of
-                an effort, considering she was bound like that. I stifled a
-                smile. "I have money," I said. "Lots of it in fact. Power comes
-                with money, so that is not an issue. As for men. Well let's just
-                say that I like women more."
               </p>
               <p>
                 "Then what do you want?" she asked in a small voice. I walked
-                steadily to her and kneeled on the floor. Once I did, I brought
-                her to a sitting position and leaned to her head so I could
-                whisper. "I want your body."
               </p>
             </div>
           </div>

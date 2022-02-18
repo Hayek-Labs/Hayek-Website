@@ -6,6 +6,20 @@
       font-size: 15px;
       line-height: 24px;
       color: #737373;
+
+      //footer布局调整
+      .top-row {
+        display: flex;
+        flex-wrap: nowrap;
+        .col-md-6 {
+          width: 30%;
+          margin-right: 5%;
+          margin-left: 10%;
+        }
+        .col-md-3 {
+          width: 20%;
+        }
+      }
     }
 
     .site-footer hr {
@@ -74,6 +88,8 @@
 
     .copyright-text {
       margin: 0;
+      //copyright和top-row对齐
+      margin-left: 10%;
     }
 
     @media (max-width: 991px) {
@@ -86,11 +102,19 @@
       .site-footer {
         padding-bottom: 0;
       }
-
       .site-footer .copyright-text,
       .site-footer .social-icons {
         text-align: center;
       }
+    }
+
+    //分割线调整
+    hr {
+      // margin-top: 20px;
+      margin-bottom: 20px;
+      border: 0;
+      border-top: 1px solid #eee;
+      background: none;
     }
 
     .social-icons {

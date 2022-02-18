@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <footer className="site-footer">
-        <div className="container">
-          <div className="row">
+        <div className="container ">
+          <div className="row top-row">
             <div className="col-sm-12 col-md-6">
               <h6>About</h6>
               <p className="text-justify">
