@@ -85,9 +85,9 @@ const CardHover = () => {
   }, []);
   return (
     <div className={styles.cardhover}>
-      <h1 class="title">Hover over the cards</h1>
+      <h1 className="title">Hover over the cards</h1>
 
-      <div id="app" class="container">
+      <div id="app" className="container">
         <card data-image="http://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=300&h=200&q=1&cs=tinysrgb&crop=">
           <h1 slot="header">Canyons</h1>
           <p slot="content">
