@@ -1,5 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import World from './world';
+import Button from '../Button';
 import styles from './index.less';
 const Banner = () => {
   useEffect(() => {
@@ -10,24 +11,26 @@ const Banner = () => {
 
     world.loop();
   }, []);
+
+  const startBtnRef = useRef<HTMLButtonElement>(undefined!);
+  useEffect(() => {
+    startBtnRef.current.click();
+  }, []);
+
   return (
     <div className={styles.banner}>
       <canvas className="webgl"></canvas>
-      <h1>
-        <small>With</small> Seasonal Wishes <small>from</small> PeHaa
-      </h1>
-      <button id="play-music" type="button">
-        Play music
-      </button>
-      <footer>
-        <p>Built with Three.js and GSAP.</p>
-        <p>
-          Inspired by{' '}
-          <a href="https://threejs-audio-reactive-visual.netlify.app/">
-            this demo by Francesco Michelini
-          </a>
-        </p>
-      </footer>
+      <Button
+        render={
+          <button
+            id="play-music"
+            className="button effect effect-2 w-m"
+            ref={startBtnRef}
+          >
+            Start
+          </button>
+        }
+      />
     </div>
   );
 };

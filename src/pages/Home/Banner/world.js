@@ -89,8 +89,8 @@ class World {
       const justFinished = this.isRunning && !this.sound.isPlaying;
       if (justFinished) {
         this.time.t1 = this.time.t;
-        this.audioBtn.textContent = 'Play again';
-        this.audioBtn.disabled = false;
+        // this.audioBtn.textContent = 'Play again';
+        // this.audioBtn.disabled = false;
         this.isRunning = false;
         const tl = gsap.timeline();
         this.angle.x = 0;
@@ -102,11 +102,11 @@ class World {
           ease: 'expo.in',
         });
 
-        tl.to(this.audioBtn, {
-          opacity: () => 1,
-          duration: 1,
-          ease: 'power1.out',
-        });
+        // tl.to(this.audioBtn, {
+        //   opacity: () => 1,
+        //   duration: 1,
+        //   ease: 'power1.out',
+        // });
       } else {
         this.camera.position.x = Math.sin(this.angle.x) * this.parameters.a;
         this.camera.position.z = Math.min(
@@ -482,7 +482,7 @@ return rotation3dY(angle) * v;
         (buffer) => {
           this.sound.setBuffer(buffer);
           this.sound.setLoop(false);
-          this.sound.setVolume(0.5);
+          this.sound.setVolume(0.0);
           this.sound.play();
           this.analyser = new THREE.AudioAnalyser(this.sound, 32);
           // get the average frequency of the sound
