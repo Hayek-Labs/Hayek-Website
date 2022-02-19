@@ -7,6 +7,8 @@ const Banner = () => {
     const world = new World({
       canvas: document.querySelector('canvas.webgl'),
       cameraPosition: { x: 0, y: 0, z: 4.5 },
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
 
     world.loop();
