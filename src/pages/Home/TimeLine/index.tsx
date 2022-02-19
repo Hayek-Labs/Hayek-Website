@@ -2,12 +2,14 @@ import { useEffect, useRef } from 'react';
 import styles from './index.less';
 
 const TimeLine = () => {
-  const firstRef = useRef();
+  const firstItemRef = useRef<HTMLInputElement>(null!);
+
   useEffect(() => {
-    if (firstRef.current) {
-      firstRef.current.click();
+    if (firstItemRef.current) {
+      firstItemRef.current.click();
     }
   }, []);
+
   return (
     <div className={styles.timeline}>
       <h2>CSS3 Timeline</h2>
@@ -22,7 +24,7 @@ const TimeLine = () => {
             id="work5"
             name="works"
             type="radio"
-            ref={firstRef}
+            ref={firstItemRef}
           />
           <div className="relative">
             <label htmlFor="work5">Lorem ipsum dolor sit amet</label>
