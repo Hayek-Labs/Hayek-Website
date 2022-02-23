@@ -74,11 +74,12 @@ class World {
     this.composer && this.composer.render();
   }
   loop() {
+    const animationSpeedFactor = 1.0 / 3.0;
+
     this.time.elapsed = this.clock.getElapsedTime();
-    this.time.delta = Math.min(
-      60,
-      (this.time.current - this.time.elapsed) * 1000,
-    );
+    this.time.delta =
+      Math.min(60, (this.time.current - this.time.elapsed) * 1000) *
+      animationSpeedFactor;
 
     if (this.analyser && this.isRunning) {
       this.time.t = this.time.elapsed - this.time.t0 + this.time.t1;
