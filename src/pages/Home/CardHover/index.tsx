@@ -56,9 +56,11 @@ const CardHover = () => {
           };
         },
         cardBgImage() {
-          return {
-            backgroundImage: `url(${this.dataImage})`,
-          };
+          return this.dataImage
+            ? {}
+            : {
+                backgroundImage: `url(${this.dataImage})`,
+              };
         },
       },
 
@@ -86,26 +88,26 @@ const CardHover = () => {
   return (
     <div className={styles.cardhover}>
       <div id="app" className="container">
-        <card data-image="http://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=300&h=200&q=1&cs=tinysrgb&crop=">
-          <h1 slot="header">Canyons</h1>
+        <card data-image="">
+          <h1 slot="header">Mint</h1>
           <p slot="content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </card>
-        <card data-image="http://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=300&h=200&q=1&cs=tinysrgb&crop=">
-          <h1 slot="header">Beaches</h1>
+        <card data-image="">
+          <h1 slot="header">Redeem</h1>
           <p slot="content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </card>
-        <card data-image="http://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=300&h=200&q=1&cs=tinysrgb&crop=">
-          <h1 slot="header">Trees</h1>
+        <card data-image="">
+          <h1 slot="header">Buyback</h1>
           <p slot="content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
         </card>
-        <card data-image="http://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=300&h=200&q=1&cs=tinysrgb&crop=">
-          <h1 slot="header">Lakes</h1>
+        <card data-image="">
+          <h1 slot="header">Staking</h1>
           <p slot="content">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           </p>
