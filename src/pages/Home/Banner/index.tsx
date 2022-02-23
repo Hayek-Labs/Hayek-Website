@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import World from './world';
 import CardHover from '../CardHover';
 import Button from '../Button';
+import Title from '../Title';
 import styles from './index.less';
 
 const Banner = () => {
@@ -35,6 +36,9 @@ const Banner = () => {
           </button>
         }
       />
+      <div className="title-wrapper">
+        <Title />
+      </div>
       <div className="card-hover">
         <CardHover />
       </div>
