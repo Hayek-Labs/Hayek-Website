@@ -7,15 +7,14 @@ export const Title = () => {
         <h1>
           <div>
             <span>the</span>
-            THEORY
-            <span>of</span>
+            STABLECOIN
+            <span>for</span>
           </div>
-          <div>EVERYTHING</div>
+          <div>GREAT SOCIETY of FREE MEN</div>
         </h1>
         <p>
-          Tim Bevan, Eric Fellner,
-          <br />
-          Lisa Bruce & Anthony McCarten{' '}
+          Pure on-chain Money, Algorithmic Stablecoin, Automatic Interest,
+          Flexible Pair, Highly Scalable
         </p>
       </div>
     </div>

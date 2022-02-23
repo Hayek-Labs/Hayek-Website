@@ -5,7 +5,7 @@ const CardHover = () => {
   useEffect(() => {
     Vue.config.devtools = true;
 
-    const cardRotationFactor = 1.0 / 3.0;
+    const cardRotationFactor = 1.0 / 4.0;
     Vue.component('card', {
       template: `
     <div class="card-wrap"
@@ -55,7 +55,9 @@ const CardHover = () => {
           const tX = this.mousePX * -40;
           const tY = this.mousePY * -40;
           return {
-            transform: `translateX(${tX / 3}px) translateY(${tY / 5}px)`,
+            transform: `translateX(${
+              (2 * cardRotationFactor * tX) / 3
+            }px) translateY(${(2 * cardRotationFactor * tY) / 5}px)`,
           };
         },
         cardBgImage() {
