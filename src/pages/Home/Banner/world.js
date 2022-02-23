@@ -400,47 +400,49 @@ return rotation3dY(angle) * v;
     this.scene.add(this.externalSphere);
   }
   addOctahedron({ color = 'white', scale, position = [0, 0, 0] }) {
-    const octa = new THREE.Mesh(
-      this.octaGeometry,
-      new THREE.MeshBasicMaterial({
-        wireframe: true,
-        color,
-      }),
-    );
+    return;
 
-    octa.scale.set(...scale);
-    octa.position.set(...position);
-    this.octas.add(octa);
+    // const octa = new THREE.Mesh(
+    //   this.octaGeometry,
+    //   new THREE.MeshBasicMaterial({
+    //     wireframe: true,
+    //     color,
+    //   }),
+    // );
+
+    // octa.scale.set(...scale);
+    // octa.position.set(...position);
+    // this.octas.add(octa);
   }
   addOctahedrons() {
     this.octas = new THREE.Group();
     this.octaGeometry = new THREE.OctahedronGeometry(0.2, 0);
-    this.addOctahedron({ color: 'red', scale: [1, 1.4, 1] });
-    this.addOctahedron({
-      color: 'tomato',
-      position: [0, 0.85, 0],
-      scale: [0.5, 0.7, 0.5],
-    });
+    // this.addOctahedron({ color: 'red', scale: [1, 1.4, 1] });
+    // this.addOctahedron({
+    //   color: 'tomato',
+    //   position: [0, 0.85, 0],
+    //   scale: [0.5, 0.7, 0.5],
+    // });
 
-    this.addOctahedron({
-      color: 'red',
-      position: [1, -0.75, 0],
-      scale: [0.5, 0.7, 0.5],
-    });
+    // this.addOctahedron({
+    //   color: 'red',
+    //   position: [1, -0.75, 0],
+    //   scale: [0.5, 0.7, 0.5],
+    // });
 
-    this.addOctahedron({
-      color: 'tomato',
-      position: [-0.75, -1.75, 0],
-      scale: [1, 1.2, 1],
-    });
+    // this.addOctahedron({
+    //   color: 'tomato',
+    //   position: [-0.75, -1.75, 0],
+    //   scale: [1, 1.2, 1],
+    // });
 
-    this.addOctahedron({
-      color: 'red',
-      position: [0.5, -1.2, 0.5],
-      scale: [0.25, 0.37, 0.25],
-    });
+    // this.addOctahedron({
+    //   color: 'red',
+    //   position: [0.5, -1.2, 0.5],
+    //   scale: [0.25, 0.37, 0.25],
+    // });
 
-    this.scene.add(this.octas);
+    // this.scene.add(this.octas);
   }
   addToScene() {
     this.addSpiral();
