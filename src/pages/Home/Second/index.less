@@ -3,9 +3,9 @@
   background-color: #1e1e1e;
   :global {
     // Images
-    @leaf-url: 'https://making-the-web.com/sites/default/files/clipart/156536/green-leaf-icon-156536-2289922.png';
-    @leaf-pattern-url: 'https://walls4u.co.uk/app/uploads/2018/10/AdobeStock_184585340.jpg';
-    @maze-url: 'http://innou.io/beta/assets/images/maze-white.png';
+    // @leaf-url: 'https://making-the-web.com/sites/default/files/clipart/156536/green-leaf-icon-156536-2289922.png';
+    // @leaf-pattern-url: 'https://walls4u.co.uk/app/uploads/2018/10/AdobeStock_184585340.jpg';
+    // @maze-url: 'http://innou.io/beta/assets/images/maze-white.png';
 
     // Palette
     @color-bg: #062133;
@@ -190,7 +190,7 @@
 
         &:before {
           content: '';
-          background: url(@maze-url) center;
+          // background: url(@maze-url) center;
           background-size: 50%;
           position: absolute;
           animation: spin @animation-duration linear reverse infinite;
@@ -246,7 +246,7 @@
       position: absolute;
       width: 3em;
       height: 3em;
-      background: url(@leaf-url) no-repeat center;
+      // background: url(@leaf-url) no-repeat center;
       background-size: contain;
       transform: rotate(40deg);
       top: 4em;
@@ -259,7 +259,7 @@
 
       .ellipsis {
         @extend .is-round;
-        background: url(@leaf-pattern-url);
+        // background: url(@leaf-pattern-url);
         position: absolute;
         width: @circle-radius * 8;
         height: @circle-radius * 4;

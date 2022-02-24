@@ -13,7 +13,13 @@ const Logo = () => {
     </div>
   );
 };
-
+const GoStarted = () => {
+  return (
+    <a target="_blank" href="https://app.hayek.tech/">
+      <div className="gostarted">GET STARTED</div>
+    </a>
+  );
+};
 const Banner = () => {
   useEffect(() => {
     const world = new World({
@@ -35,6 +41,7 @@ const Banner = () => {
     <div className={styles.banner}>
       <canvas className="webgl"></canvas>
       <Logo />
+      <GoStarted />
       <Button
         render={
           <button
