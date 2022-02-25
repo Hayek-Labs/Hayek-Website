@@ -1,15 +1,68 @@
 import React from 'react';
 import styles from './index.less';
 
-import { ReactComponent as UsdtSVG } from '../../../static_assets/tether-usdt-logo.svg';
-import { ReactComponent as UsdcSVG } from '../../../static_assets/usd-coin-usdc-logo.svg';
+import { ReactComponent as UsdtSVG } from '@/static_assets/logos/coins/tether-usdt-logo.svg';
+import { ReactComponent as UsdcSVG } from '@/static_assets/logos/coins/usd-coin-usdc-logo.svg';
+import { Coin } from '@/constants';
+
+import CoinTextWithLogo from '../CoinTextWithLogo';
+
+const LogoSvgProps = {
+  width: '25',
+  height: '25',
+};
+const BaseCard: React.FC<{
+  coin1: Coin;
+  coin2: Coin;
+}> = ({ coin1, coin2 }) => {
+  return (
+    <div className="inner-card">
+      <CoinTextWithLogo
+        coin={coin1}
+        svgProps={LogoSvgProps}
+        textClassName="coin-text"
+      />
+      <div className="plus">+</div>
+      <CoinTextWithLogo
+        coin={coin2}
+        svgProps={LogoSvgProps}
+        textClassName="coin-text"
+      />
+    </div>
+  );
+};
+
+const MintedCard: React.FC<{
+  coin: Coin;
+}> = ({ coin }) => {
+  return (
+    <div className="inner-card">
+      <CoinTextWithLogo
+        coin={coin}
+        svgProps={LogoSvgProps}
+        textClassName="coin-text"
+      />
+    </div>
+  );
+};
+
+const CardStat: React.FC<{
+  title: string;
+  value: string;
+}> = ({ title, value }) => {
+  return (
+    <div>
+      <div className="title">{title}</div>
+      <div className="value">{value}</div>
+    </div>
+  );
+};
 
 const Card: React.FC<{
   className?: string;
-  Svg: React.FC<
-    { width?: string; height?: string; viewBox?: string } & unknown
-  >;
-}> = ({ className, Svg }) => {
+  coin: Coin;
+  Svg: SVGComponent;
+}> = ({ className, Svg, coin }) => {
   const classes = ['card'];
   if (className !== undefined) {
     classes.push(className);
@@ -19,52 +72,23 @@ const Card: React.FC<{
     <div className={classes.join(' ')}>
       <div className="additional">
         <div className="user-card">
-          <div className="level center">Level 13</div>
-          <div className="points center">5,312 Points</div>
+          <div className="name center">{coin}</div>
           <Svg width="110" height="110" />
         </div>
         <div className="more-info">
-          <h1>Jane Doe</h1>
-          <div className="coords">
-            <span>Group Name</span>
-            <span>Joined January 2019</span>
-          </div>
-          <div className="coords">
-            <span>Position/Role</span>
-            <span>City, Country</span>
-          </div>
+          <h1>CoinMarketCap Rank: 3</h1>
           <div className="stats">
-            <div>
-              <div className="title">Awards</div>
-              <i className="fa fa-trophy"></i>
-              <div className="value">2</div>
-            </div>
-            <div>
-              <div className="title">Matches</div>
-              <i className="fa fa-gamepad"></i>
-              <div className="value">27</div>
-            </div>
-            <div>
-              <div className="title">Pals</div>
-              <i className="fa fa-group"></i>
-              <div className="value">123</div>
-            </div>
-            <div>
-              <div className="title">Coffee</div>
-              <i className="fa fa-coffee"></i>
-              <div className="value infinity">∞</div>
-            </div>
+            <CardStat title="Price" value="$1.00" />
+            <CardStat title="Market Cap" value="$79,463,666,500" />
+            <CardStat title="Volume (24h)" value="$57,026,923,078" />
+            <CardStat title="Circulating Supply" value="79,415,206,825" />
           </div>
         </div>
       </div>
       <div className="general">
-        <h1>Jane Doe</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-          volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut
-          pulvinar.
-        </p>
-        <span className="more">Mouse over the card for more info</span>
+        <BaseCard coin1={coin} coin2="HAS" />
+        <MintedCard coin="USDH" />
+        <BaseCard coin1={coin} coin2="HAS" />
       </div>
     </div>
   );
@@ -74,8 +98,8 @@ const CoinCardDisplay = () => {
   return (
     <div className={styles['user-card-provider']}>
       <div className="center">
-        <Card Svg={UsdtSVG} />
-        <Card Svg={UsdcSVG} className="green" />
+        <Card Svg={UsdtSVG} coin="USDT" />
+        <Card Svg={UsdcSVG} className="green" coin="USDC" />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import CardHover from '../CardHover';
 import Button from '../Button';
 import Title from '../Title';
 import styles from './index.less';
-import { ReactComponent as LogoSVG } from '../../../static_assets/hayek-logo-white.svg';
+import { ReactComponent as LogoSVG } from '@/static_assets/logos/coins/hayek-logo-white.svg';
 
 const Logo = () => {
   return (

@@ -5,21 +5,6 @@
   background-color: #1e1e1e;
 
   :global {
-    .skin {
-      fill: #eab38f;
-    }
-    .eyes {
-      fill: #1f1f1f;
-    }
-    .hair {
-      fill: #2f1b0d;
-    }
-    .line {
-      fill: none;
-      stroke: #2f1b0d;
-      stroke-width: 2px;
-    }
-
     .center {
       position: absolute;
       top: 50%;
@@ -32,7 +17,7 @@
     }
 
     .card {
-      width: 450px;
+      width: 500px;
       height: 250px;
       background-color: #fff;
       background: linear-gradient(#f8f8f8, #fff);
@@ -41,10 +26,6 @@
       overflow: hidden;
       position: relative;
       margin: 1.5rem;
-    }
-
-    .card h1 {
-      text-align: center;
     }
 
     .card .additional {
@@ -77,31 +58,14 @@
       float: left;
     }
 
-    .card .additional .user-card::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 10%;
-      right: -2px;
-      height: 80%;
-      border-left: 2px solid rgba(0, 0, 0, 0.025);
-    }
-
-    .card .additional .user-card .level,
-    .card .additional .user-card .points {
-      top: 15%;
+    .card .additional .user-card .name {
+      top: 75%;
       color: #fff;
       text-transform: uppercase;
-      font-size: 0.75em;
+      font-size: 0.95em;
       font-weight: bold;
-      background: rgba(0, 0, 0, 0.15);
       padding: 0.125rem 0.75rem;
-      border-radius: 100px;
       white-space: nowrap;
-    }
-
-    .card .additional .user-card .points {
-      top: 85%;
     }
 
     .card .additional .user-card svg {
@@ -109,20 +73,26 @@
     }
 
     .card .additional .more-info {
-      width: 300px;
+      width: 350px;
       float: left;
       position: absolute;
       left: 150px;
       height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .card .additional .more-info h1 {
+      padding: 10px 0px;
+      margin-bottom: 25px;
+
       color: #fff;
-      margin-bottom: 0;
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
     }
 
     .card.green .additional .more-info h1 {
-      color: #224c36;
+      color: #fff;
     }
 
     .card .additional .coords {
@@ -132,7 +102,7 @@
     }
 
     .card.green .additional .coords {
-      color: #325c46;
+      color: #fff;
     }
 
     .card .additional .coords span + span {
@@ -142,45 +112,45 @@
     .card .additional .stats {
       font-size: 2rem;
       display: flex;
-      position: absolute;
+      flex-direction: row;
+      flex-wrap: wrap;
       bottom: 1rem;
       left: 1rem;
       right: 1rem;
-      top: auto;
       color: #fff;
+      flex: 1;
     }
 
     .card.green .additional .stats {
-      color: #325c46;
+      color: #fff;
     }
 
     .card .additional .stats > div {
-      flex: 1;
-      text-align: center;
+      width: 50%;
+      padding-right: 5px;
     }
 
     .card .additional .stats i {
       display: block;
     }
 
-    .card .additional .stats div.title {
-      font-size: 0.75rem;
-      font-weight: bold;
-      text-transform: uppercase;
+    .card .additional .stats .title {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 0;
     }
 
-    .card .additional .stats div.value {
-      font-size: 1.5rem;
-      font-weight: bold;
+    .card .additional .stats .value {
+      font-size: 1.1rem;
       line-height: 1.5rem;
-    }
 
-    .card .additional .stats div.value.infinity {
-      font-size: 2.5rem;
+      word-break: break-all;
+      white-space: normal;
     }
 
     .card .general {
-      width: 300px;
+      width: 350px;
       height: 100%;
       position: absolute;
       top: 0;
@@ -189,13 +159,34 @@
       box-sizing: border-box;
       padding: 1rem;
       padding-top: 0;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
-    .card .general .more {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      font-size: 0.9em;
+    div.inner-card {
+      border: 2px solid black;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      min-height: 150px;
+
+      padding: 0px 5px;
+
+      .plus {
+        font-size: 2.5rem;
+      }
+
+      .coin-text {
+        font-size: 1rem;
+        font-weight: bold;
+      }
     }
   }
 }
