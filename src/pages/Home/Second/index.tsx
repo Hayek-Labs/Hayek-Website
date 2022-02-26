@@ -115,12 +115,12 @@ const Second = () => {
   return (
     <div className={styles.second}>
       <div className="map circle-graphic">
-        <div className="layer ellipses">
+        {/* <div className="layer ellipses">
           <div className="ellipsis"></div>
           <div className="ellipsis"></div>
           <div className="ellipsis"></div>
           <div className="circle is-cover"></div>
-        </div>
+        </div> */}
         <div className="layer">
           <div className="circle is-second"></div>
         </div>
@@ -129,34 +129,34 @@ const Second = () => {
         </div>
         <div className="layer">
           <Circle
-            title="game"
-            subtitle="innou"
+            title="Decollateralize"
+            subtitle=""
             dataIndex="1"
-            dataInfo='{"title":"game","icon":"gamepad","description":"INNOU launches a Crypto Currency use case, where users can playfully gather and earn cryptocurrencies in a GPS map-based game. For businesses using the digital layer we are placing over the real world is a completely new form of marketing, which ultimately leads to more effective and more successful advertisement and marketing campaigns. On the user’s side it offers an innovative gaming experience combined with a revolutionized approach of purchasing.\n    "}'
+            dataInfo='{"title":"Decollateralize","icon":"gamepad","description":"INNOU launches a Crypto Currency use case, where users can playfully gather and earn cryptocurrencies in a GPS map-based game. For businesses using the digital layer we are placing over the real world is a completely new form of marketing, which ultimately leads to more effective and more successful advertisement and marketing campaigns. On the user’s side it offers an innovative gaming experience combined with a revolutionized approach of purchasing.\n    "}'
           />
           <Circle
-            title="channel"
-            subtitle="innou"
+            title="Market Operation"
+            subtitle=""
             dataIndex="2"
-            dataInfo='{"title":"channel","icon":"tv-retro","description":"For providing content and information about the latest crypto technology, sustainable innovation and updates from the ecosystem we launch our own INNOU CHANNEL. Before the INNOU Channel is launched in the INNOU mobile app we will provide streams on web video and social media platforms. Once the mobile app is launched users can send their individually created content and earn money in return. The long-term vision is to become a global media library filled with high quality content.\n    "}'
+            dataInfo='{"title":"Market Operation","icon":"tv-retro","description":"For providing content and information about the latest crypto technology, sustainable innovation and updates from the ecosystem we launch our own INNOU CHANNEL. Before the INNOU Channel is launched in the INNOU mobile app we will provide streams on web video and social media platforms. Once the mobile app is launched users can send their individually created content and earn money in return. The long-term vision is to become a global media library filled with high quality content.\n    "}'
           />
           <Circle
-            title="frequency"
-            subtitle="innou"
+            title="Buyback and Burn"
+            subtitle=""
             dataIndex="3"
-            dataInfo='{"title":"freequency","icon":"broadcast-tower","description":"This module supports every medium that focuses on audio-based content. A variety of channels allows INNOU and its users to upload their own content. Artists can receive direct payment for their work by donations from other users. In addition to that other user’s comments can be rewarded with donations as well. With an ‘on demand’ service INNOU is aiming to provide a wide range of music, free to listen for the community.\n    "}'
+            dataInfo='{"title":"Buyback and Burn","icon":"broadcast-tower","description":"This module supports every medium that focuses on audio-based content. A variety of channels allows INNOU and its users to upload their own content. Artists can receive direct payment for their work by donations from other users. In addition to that other user’s comments can be rewarded with donations as well. With an ‘on demand’ service INNOU is aiming to provide a wide range of music, free to listen for the community.\n    "}'
           />
           <Circle
-            title="chat"
-            subtitle="innou"
+            title="Equilibrium "
+            subtitle=""
             dataIndex="4"
-            dataInfo='{"title":"chat","icon":"comments","description":"For communication within the INNOU ecosystem we will offer an encrypted chat function. Connecting people all over the word, making friends and building up a striving community together is our vision. The chat is integrated in all INNOU modules. It can be used to share game achievements and instant chatting for all purposes. With hashtags and links users can discuss prices, money transfers and any content within the app\n    "}'
+            dataInfo='{"title":"Equilibrium","icon":"comments","description":"For communication within the INNOU ecosystem we will offer an encrypted chat function. Connecting people all over the word, making friends and building up a striving community together is our vision. The chat is integrated in all INNOU modules. It can be used to share game achievements and instant chatting for all purposes. With hashtags and links users can discuss prices, money transfers and any content within the app\n    "}'
           />
           <Circle
-            title="social hub"
-            subtitle="innou"
+            title="Recollateralize"
+            subtitle=""
             dataIndex="5"
-            dataInfo='{"title":"social hub","icon":"users","description":"For our INNOU Ecosystem to be complete we are building a social platform where users can communicate, connect and share their ideas. Users can choose if they want their profile to be used for casual social media experience or freelancing and promotion or posting and publishing their content. This can be anything from art to blogs, journalistic reports, music and any other mediums of work. To foster intrinsic motivation annual awards for the best publications will be submitted on our platform. Moreover, we will launch our first newspaper, which will be authored solely by members of the INNOU community.\n    "}'
+            dataInfo='{"title":"Recollateralize","icon":"users","description":"For our INNOU Ecosystem to be complete we are building a social platform where users can communicate, connect and share their ideas. Users can choose if they want their profile to be used for casual social media experience or freelancing and promotion or posting and publishing their content. This can be anything from art to blogs, journalistic reports, music and any other mediums of work. To foster intrinsic motivation annual awards for the best publications will be submitted on our platform. Moreover, we will launch our first newspaper, which will be authored solely by members of the INNOU community.\n    "}'
           />
           <Circle
             title="token"
@@ -168,11 +168,14 @@ const Second = () => {
         <div className="layer">
           <div
             className="circle node is-main"
-            data-info='{"title":"INNOU ID","subtitle":"Crypto wallet","icon":"wallet","main":true,"description":"Our integrated wallet allows users to directly do in-app transactions. Within the game the collected cryptocurrencies will automatically be stored in the INNOU wallet. Additionally, users can also make purchases at real shops that accept crypto-currencies. The wallet will feature TOP 20 cryptocurrencies to date, including our green coin for building the trees.\n    "}'
+            data-info='{"title":"INNOU ID","subtitle":"Algorithmic Moneytary Tools","icon":"wallet","main":true,"description":"Our integrated wallet allows users to directly do in-app transactions. Within the game the collected cryptocurrencies will automatically be stored in the INNOU wallet. Additionally, users can also make purchases at real shops that accept crypto-currencies. The wallet will feature TOP 20 cryptocurrencies to date, including our green coin for building the trees.\n    "}'
             data-index="0"
           >
-            <h2 className="title is-2">INNOU ID</h2>
-            <div className="subtitle is-strong">Crypto wallet</div>
+            <h2 className="title is-2"></h2>
+            <div className="subtitle is-strong">
+              Algorithmic Moneytary <br />
+              Tools
+            </div>
           </div>
         </div>
       </div>
@@ -181,7 +184,7 @@ const Second = () => {
         <div className="modal-card">
           <header className="modal-card-head">
             <div className="modal-card-title">
-              <span>INNOU </span>
+              <span></span>
               <span className="is-strong" id="introModalTitle"></span>
             </div>
             <button

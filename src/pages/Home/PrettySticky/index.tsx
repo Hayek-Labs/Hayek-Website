@@ -5,12 +5,12 @@ const PrettySticky = () => {
   return (
     <div className={styles.prettysticky}>
       <div className="container">
-        <h1 className="center">Kidnapping The Princess</h1>
+        <h1 className="center"></h1>
 
-        <article className="episode">
+        {/* <article className="episode">
           <div className="episode__number"></div>
           <div className="episode__content">
-            <div className="title">Prologue</div>
+            <div className="title"></div>
             <div className="story">
               <p>Say hello to the perfection of Cybele- tall, gorgeous,</p>
               <p>
@@ -21,11 +21,11 @@ const PrettySticky = () => {
               </p>
             </div>
           </div>
-        </article>
+        </article> */}
 
-        <article className="episode">
+        <article className="episode ">
           <div className="episode__number">01</div>
-          <div className="episode__content">
+          <div className="episode__content episode-top">
             <div className="title">Episode 1</div>
             <div className="story">
               <p>"Let go of me you mongrel!"</p>
