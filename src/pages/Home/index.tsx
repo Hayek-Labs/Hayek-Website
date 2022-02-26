@@ -10,14 +10,14 @@ import Intro from './stranger-things-intro';
 export default function IndexPage() {
   return (
     <div>
-      <Banner />
-      <CoinCardDisplay />
+      {/* <Banner />
+      <CoinCardDisplay /> */}
       <Intro />
-      <Second />
+      {/* <Second />
       <PrettySticky />
-      <TimeLine />
+      <TimeLine /> */}
       {/* <TextFillingWithWater /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
