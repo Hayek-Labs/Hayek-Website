@@ -1,9 +1,10 @@
 import React from 'react';
+
+import { MdArrowRightAlt } from 'react-icons/md';
+
 import styles from './index.less';
 
-import { ReactComponent as UsdtSVG } from '@/static_assets/logos/coins/tether-usdt-logo.svg';
-import { ReactComponent as UsdcSVG } from '@/static_assets/logos/coins/usd-coin-usdc-logo.svg';
-import { Coin } from '@/constants';
+import { Coin, coinToLogo } from '@/constants';
 
 import CoinTextWithLogo from '../CoinTextWithLogo';
 
@@ -58,11 +59,21 @@ const CardStat: React.FC<{
   );
 };
 
+const ArrowWithText: React.FC<{ text: string }> = ({ text }) => {
+  return (
+    <div className="arrow-with-text">
+      <span className="text"> {text}</span>
+      <MdArrowRightAlt color="#000" size={30} viewBox="4 4 16 16" />
+    </div>
+  );
+};
+
 const Card: React.FC<{
   className?: string;
   coin: Coin;
-  Svg: SVGComponent;
-}> = ({ className, Svg, coin }) => {
+}> = ({ className, coin }) => {
+  const Svg = coinToLogo[coin];
+
   const classes = ['card'];
   if (className !== undefined) {
     classes.push(className);
@@ -87,7 +98,9 @@ const Card: React.FC<{
       </div>
       <div className="general">
         <BaseCard coin1={coin} coin2="HAS" />
+        <ArrowWithText text="Mint" />
         <MintedCard coin="USDH" />
+        <ArrowWithText text="Redeem" />
         <BaseCard coin1={coin} coin2="HAS" />
       </div>
     </div>
@@ -98,8 +111,14 @@ const CoinCardDisplay = () => {
   return (
     <div className={styles['user-card-provider']}>
       <div className="center">
-        <Card Svg={UsdtSVG} coin="USDT" />
-        <Card Svg={UsdcSVG} className="green" coin="USDC" />
+        <div>
+          <Card coin="USDT" />
+          <Card coin="BUSD" />
+        </div>
+        <div>
+          <Card className="green" coin="USDC" />
+          <Card className="green" coin="DAI" />
+        </div>
       </div>
     </div>
   );
