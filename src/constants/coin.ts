@@ -15,3 +15,12 @@ export const coinToLogo: Record<Coin, SVGComponent> = {
   BUSD: BUSDLogo,
   DAI: DAILogo,
 };
+
+export const coinToCoinGeckoId: Record<Coin, string | undefined> = {
+  USDT: 'tether',
+  USDC: 'usd-coin',
+  BUSD: 'binance-usd',
+  DAI: 'dai',
+  HAS: undefined,
+  USDH: undefined,
+};

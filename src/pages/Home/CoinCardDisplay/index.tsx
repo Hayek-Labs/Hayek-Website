@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { MdArrowRightAlt } from 'react-icons/md';
 
@@ -7,6 +7,8 @@ import styles from './index.less';
 import { Coin, coinToLogo } from '@/constants';
 
 import CoinTextWithLogo from '../CoinTextWithLogo';
+import axios from 'axios';
+import { coinToCoinGeckoId } from '@/constants/coin';
 
 const LogoSvgProps = {
   width: '25',
@@ -49,7 +51,8 @@ const MintedCard: React.FC<{
 
 const CardStat: React.FC<{
   title: string;
-  value: string;
+  value?: string;
+  loading: boolean;
 }> = ({ title, value }) => {
   return (
     <div>
@@ -64,6 +67,114 @@ const ArrowWithText: React.FC<{ text: string }> = ({ text }) => {
     <div className="arrow-with-text">
       <span className="text"> {text}</span>
       <MdArrowRightAlt color="#000" size={30} viewBox="4 4 16 16" />
+    </div>
+  );
+};
+
+const CardStats: React.FC<{
+  coin: Coin;
+}> = ({ coin }) => {
+  const [data, setData] = useState<{
+    price?: number;
+    market_cap?: number;
+    market_cap_rank?: number;
+    volume?: number;
+    circulating_supply?: number;
+  }>({});
+  const loading = data.price === undefined;
+
+  const coinGeckoId = coinToCoinGeckoId[coin];
+  const hasCoinGeckoId = coinGeckoId !== undefined;
+
+  useEffect(() => {
+    if (hasCoinGeckoId) {
+      axios({
+        method: 'GET',
+        url: `https://api.coingecko.com/api/v3/coins/${coinGeckoId}`,
+      })
+        .then((data) => data.data)
+        .then((data) => {
+          console.log(coin, data);
+          const market_data = data.market_data;
+
+          const newData = {
+            price: market_data.current_price.usd,
+            market_cap_rank: data.market_cap_rank,
+            market_cap: market_data.market_cap.usd,
+            volume: market_data.total_volume.usd,
+            circulating_supply: market_data.circulating_supply,
+          };
+
+          for (const prop in newData) {
+            // @ts-ignore
+            if (newData[prop] === undefined) {
+              console.log('prop ', prop, ' is undefined');
+              return;
+            }
+          }
+
+          setData(newData);
+        });
+    }
+  }, [hasCoinGeckoId, coinGeckoId]);
+
+  if (!hasCoinGeckoId) {
+    return <div>CoinGeckoId doesn't exist</div>;
+  }
+
+  const price = (() => {
+    if (data.price) {
+      return data.price.toString();
+    } else {
+      return undefined;
+    }
+  })();
+
+  const market_cap = (() => {
+    if (data.market_cap) {
+      return data.market_cap.toString();
+    } else {
+      return undefined;
+    }
+  })();
+
+  const total_volume = (() => {
+    if (data.volume) {
+      return data.volume.toString();
+    } else {
+      return undefined;
+    }
+  })();
+
+  const circulating_supply = (() => {
+    if (data.circulating_supply) {
+      return data.circulating_supply.toString();
+    } else {
+      return undefined;
+    }
+  })();
+
+  return (
+    <div className="more-info">
+      <h1>CoinMarketCap Rank: {loading ? '...' : data.market_cap_rank}</h1>
+      <div className="stats">
+        <CardStat title="Price" value={price} loading={loading} />
+        <CardStat
+          title="Market Cap"
+          value={`$${market_cap}`}
+          loading={loading}
+        />
+        <CardStat
+          title="Volume (24h)"
+          value={`$${total_volume}`}
+          loading={loading}
+        />
+        <CardStat
+          title="Circulating Supply"
+          value={circulating_supply}
+          loading={loading}
+        />
+      </div>
     </div>
   );
 };
@@ -86,15 +197,7 @@ const Card: React.FC<{
           <div className="name center">{coin}</div>
           <Svg width="110" height="110" />
         </div>
-        <div className="more-info">
-          <h1>CoinMarketCap Rank: 3</h1>
-          <div className="stats">
-            <CardStat title="Price" value="$1.00" />
-            <CardStat title="Market Cap" value="$79,463,666,500" />
-            <CardStat title="Volume (24h)" value="$57,026,923,078" />
-            <CardStat title="Circulating Supply" value="79,415,206,825" />
-          </div>
-        </div>
+        <CardStats coin={coin} />
       </div>
       <div className="general">
         <BaseCard coin1={coin} coin2="HAS" />
