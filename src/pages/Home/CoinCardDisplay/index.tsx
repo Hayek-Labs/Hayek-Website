@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-
+import axios from 'axios';
 import { MdArrowRightAlt } from 'react-icons/md';
 
-import styles from './index.less';
-
 import { Coin, coinToLogo } from '@/constants';
+import { coinToCoinGeckoId } from '@/constants/coin';
 
 import CoinTextWithLogo from '../CoinTextWithLogo';
-import axios from 'axios';
-import { coinToCoinGeckoId } from '@/constants/coin';
+
+import styles from './index.less';
 
 const LogoSvgProps = {
   width: '25',
@@ -116,7 +115,7 @@ const CardStats: React.FC<{
           setData(newData);
         });
     }
-  }, [hasCoinGeckoId, coinGeckoId]);
+  }, [coin, coinGeckoId, hasCoinGeckoId]);
 
   if (!hasCoinGeckoId) {
     return <div>CoinGeckoId doesn't exist</div>;
