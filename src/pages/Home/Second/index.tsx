@@ -20,7 +20,7 @@ const Circle: React.FC<CircleProps> = ({
         <div className="subtitle">{subtitle}</div>
         <h4 className="title is-4">{title}</h4>
       </div>
-      <div className="leaf"></div>
+      {/* <div className="leaf"></div> */}
     </div>
   );
 };

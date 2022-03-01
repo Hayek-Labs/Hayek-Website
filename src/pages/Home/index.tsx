@@ -14,9 +14,9 @@ export default function IndexPage() {
       <CoinCardDisplay />
       {/* <Intro /> */}
       <Second />
-      <PrettySticky />
+      {/* <PrettySticky /> */}
       <TimeLine />
-      <TextFillingWithWater />
+      {/* <TextFillingWithWater /> */}
       <Footer />
     </div>
   );
