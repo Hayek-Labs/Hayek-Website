@@ -1,3 +1,3 @@
-import { Coin } from './coin';
+import { Coin, coinToLogo } from './coin';
 
-export { Coin };
+export { Coin, coinToLogo };
