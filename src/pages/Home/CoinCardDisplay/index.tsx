@@ -4,6 +4,8 @@ import { MdArrowRightAlt } from 'react-icons/md';
 
 import { Coin, coinToLogo } from '@/constants';
 import { coinToCoinGeckoId } from '@/constants/coin';
+import Opt from '@/util/option';
+import { formatUSD } from '@/util/currency';
 
 import CoinTextWithLogo from '../CoinTextWithLogo';
 
@@ -50,13 +52,15 @@ const MintedCard: React.FC<{
 
 const CardStat: React.FC<{
   title: string;
-  value?: string;
+  value: Option<string>;
   loading: boolean;
-}> = ({ title, value }) => {
+}> = ({ title, value, loading }) => {
   return (
     <div>
       <div className="title">{title}</div>
-      <div className="value">{value}</div>
+      <div className="value">
+        {loading || value === undefined ? '...' : value}
+      </div>
     </div>
   );
 };
@@ -121,53 +125,22 @@ const CardStats: React.FC<{
     return <div>CoinGeckoId doesn't exist</div>;
   }
 
-  const price = (() => {
-    if (data.price) {
-      return data.price.toString();
-    } else {
-      return undefined;
-    }
-  })();
+  const format = (val: number) => {
+    return formatUSD(val);
+  };
 
-  const market_cap = (() => {
-    if (data.market_cap) {
-      return data.market_cap.toString();
-    } else {
-      return undefined;
-    }
-  })();
-
-  const total_volume = (() => {
-    if (data.volume) {
-      return data.volume.toString();
-    } else {
-      return undefined;
-    }
-  })();
-
-  const circulating_supply = (() => {
-    if (data.circulating_supply) {
-      return data.circulating_supply.toString();
-    } else {
-      return undefined;
-    }
-  })();
+  const price = Opt.map(data.price, format);
+  const market_cap = Opt.map(data.market_cap, format);
+  const total_volume = Opt.map(data.volume, format);
+  const circulating_supply = Opt.map(data.circulating_supply, format);
 
   return (
     <div className="more-info">
       <h1>CoinMarketCap Rank: {loading ? '...' : data.market_cap_rank}</h1>
       <div className="stats">
         <CardStat title="Price" value={price} loading={loading} />
-        <CardStat
-          title="Market Cap"
-          value={`$${market_cap}`}
-          loading={loading}
-        />
-        <CardStat
-          title="Volume (24h)"
-          value={`$${total_volume}`}
-          loading={loading}
-        />
+        <CardStat title="Market Cap" value={market_cap} loading={loading} />
+        <CardStat title="Volume (24h)" value={total_volume} loading={loading} />
         <CardStat
           title="Circulating Supply"
           value={circulating_supply}
@@ -194,7 +167,7 @@ const Card: React.FC<{
       <div className="additional">
         <div className="user-card">
           <div className="name center">{coin}</div>
-          <Svg width="110" height="110" />
+          <Svg width="110" />
         </div>
         <CardStats coin={coin} />
       </div>
