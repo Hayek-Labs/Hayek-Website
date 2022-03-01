@@ -127,7 +127,7 @@ const Second = () => {
         <div className="layer">
           <div className="circle is-third"></div>
         </div>
-        <div className="layer">
+        <div className="layer layer-third">
           <Circle
             title="Decollateralize"
             subtitle=""
@@ -160,19 +160,19 @@ const Second = () => {
           />
           <Circle
             title="token"
-            subtitle="innou"
+            subtitle=""
             dataIndex="6"
             dataInfo='{"title":"token","icon":"coins","description":"INNOU is the newest currency in the crypto market. Its availability will stretch throughout our Pre-ICO and ICO phase. Our purpose is to create opportunities of token utilization in everyday lives and encourage the empowerment of a wide global market. Further details for INNOU Token, Smart Contract and Pre-ICO and ICO formula are stated under the ‘INNOU Token’ chapter.\n    "}'
           />
         </div>
-        <div className="layer">
+        <div className="layer layer-main">
           <div
             className="circle node is-main"
             data-info='{"title":"INNOU ID","subtitle":"Algorithmic Moneytary Tools","icon":"wallet","main":true,"description":"Our integrated wallet allows users to directly do in-app transactions. Within the game the collected cryptocurrencies will automatically be stored in the INNOU wallet. Additionally, users can also make purchases at real shops that accept crypto-currencies. The wallet will feature TOP 20 cryptocurrencies to date, including our green coin for building the trees.\n    "}'
             data-index="0"
           >
             <h2 className="title is-2"></h2>
-            <div className="subtitle is-strong">
+            <div className="subtitle is-strong main-title">
               Algorithmic Moneytary <br />
               Tools
             </div>
