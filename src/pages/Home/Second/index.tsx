@@ -141,10 +141,10 @@ const Second = () => {
             dataInfo='{"title":"Market Operation","icon":"tv-retro","description":"For providing content and information about the latest crypto technology, sustainable innovation and updates from the ecosystem we launch our own INNOU CHANNEL. Before the INNOU Channel is launched in the INNOU mobile app we will provide streams on web video and social media platforms. Once the mobile app is launched users can send their individually created content and earn money in return. The long-term vision is to become a global media library filled with high quality content.\n    "}'
           />
           <Circle
-            title="Buyback and Burn"
+            title="Buyback"
             subtitle=""
             dataIndex="3"
-            dataInfo='{"title":"Buyback and Burn","icon":"broadcast-tower","description":"This module supports every medium that focuses on audio-based content. A variety of channels allows INNOU and its users to upload their own content. Artists can receive direct payment for their work by donations from other users. In addition to that other user’s comments can be rewarded with donations as well. With an ‘on demand’ service INNOU is aiming to provide a wide range of music, free to listen for the community.\n    "}'
+            dataInfo='{"title":"Buyback","icon":"broadcast-tower","description":"This module supports every medium that focuses on audio-based content. A variety of channels allows INNOU and its users to upload their own content. Artists can receive direct payment for their work by donations from other users. In addition to that other user’s comments can be rewarded with donations as well. With an ‘on demand’ service INNOU is aiming to provide a wide range of music, free to listen for the community.\n    "}'
           />
           <Circle
             title="Equilibrium "
@@ -159,10 +159,10 @@ const Second = () => {
             dataInfo='{"title":"Recollateralize","icon":"users","description":"For our INNOU Ecosystem to be complete we are building a social platform where users can communicate, connect and share their ideas. Users can choose if they want their profile to be used for casual social media experience or freelancing and promotion or posting and publishing their content. This can be anything from art to blogs, journalistic reports, music and any other mediums of work. To foster intrinsic motivation annual awards for the best publications will be submitted on our platform. Moreover, we will launch our first newspaper, which will be authored solely by members of the INNOU community.\n    "}'
           />
           <Circle
-            title="token"
+            title="Arbitrage"
             subtitle=""
             dataIndex="6"
-            dataInfo='{"title":"token","icon":"coins","description":"INNOU is the newest currency in the crypto market. Its availability will stretch throughout our Pre-ICO and ICO phase. Our purpose is to create opportunities of token utilization in everyday lives and encourage the empowerment of a wide global market. Further details for INNOU Token, Smart Contract and Pre-ICO and ICO formula are stated under the ‘INNOU Token’ chapter.\n    "}'
+            dataInfo='{"title":"Arbitrage","icon":"coins","description":"INNOU is the newest currency in the crypto market. Its availability will stretch throughout our Pre-ICO and ICO phase. Our purpose is to create opportunities of token utilization in everyday lives and encourage the empowerment of a wide global market. Further details for INNOU Token, Smart Contract and Pre-ICO and ICO formula are stated under the ‘INNOU Token’ chapter.\n    "}'
           />
         </div>
         <div className="layer layer-main">

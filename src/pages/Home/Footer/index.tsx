@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styles from './index.less';
-
+// import {BsFacebook} from 'react-icons/md';
 const Footer = () => {
   return (
     <div className={styles.footer}>
@@ -92,22 +92,22 @@ const Footer = () => {
               <ul className="social-icons">
                 <li>
                   <a className="facebook" href="#">
-                    <i className="fa fa-facebook"></i>
+                    {/* <i className="fa fa-facebook"></i> */}
                   </a>
                 </li>
                 <li>
                   <a className="twitter" href="#">
-                    <i className="fa fa-twitter"></i>
+                    {/* <i className="fa fa-twitter"></i> */}
                   </a>
                 </li>
                 <li>
                   <a className="dribbble" href="#">
-                    <i className="fa fa-dribbble"></i>
+                    {/* <i className="fa fa-dribbble"></i> */}
                   </a>
                 </li>
                 <li>
                   <a className="linkedin" href="#">
-                    <i className="fa fa-linkedin"></i>
+                    {/* <i className="fa fa-linkedin"></i> */}
                   </a>
                 </li>
               </ul>
