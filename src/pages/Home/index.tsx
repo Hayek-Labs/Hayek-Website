@@ -15,7 +15,7 @@ export default function IndexPage() {
       {/* <Intro /> */}
       <Second />
       {/* <PrettySticky /> */}
-      {/* <TimeLine /> */}
+      <TimeLine />
       {/* <TextFillingWithWater /> */}
       <Footer />
     </div>
