@@ -6,12 +6,13 @@ import TextFillingWithWater from './TextFillingWithWater';
 import Footer from './Footer';
 import CoinCardDisplay from './CoinCardDisplay';
 import Intro from './stranger-things-intro';
-
+import FlipForGsap from './FlipForGsap';
 export default function IndexPage() {
   return (
     <div>
       <Banner />
       <CoinCardDisplay />
+      <FlipForGsap />
       {/* <Intro /> */}
       <Second />
       {/* <PrettySticky /> */}
