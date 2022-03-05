@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import styles from './index.less';
 
 const FlipForGsap = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(Flip);
 
     let layouts = ['final', 'plain', 'columns', 'grid'],
-      container = document.querySelector('.container'),
+      container = document.getElementById('containerFilp'),
       curLayout = 0; // index of the current layout
 
     function nextState() {
@@ -42,7 +42,7 @@ const FlipForGsap = () => {
 
   return (
     <div className={styles.flipforgsap}>
-      <div className="container final">
+      <div id="containerFilp" className="container final">
         <div className="letter F">F</div>
         <div className="letter l">l</div>
         <div className="letter i">i</div>
