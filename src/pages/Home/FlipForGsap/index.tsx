@@ -43,14 +43,13 @@ const FlipForGsap = () => {
   return (
     <div className={styles.flipforgsap}>
       <div id="containerFilp" className="container final">
-        <div className="letter F">F</div>
-        <div className="letter l">l</div>
-        <div className="letter i">i</div>
-        <div className="letter p">p</div>
-        <div className="for">for</div>
-        <div className="gsap">GSAP</div>
+        <div className="letter F">U</div>
+        <div className="letter l">S</div>
+        <div className="letter i">D</div>
+        <div className="letter p">H</div>
+        {/* <div className="for">for</div> */}
+        {/* <div className="gsap"><i className=""></i></div> */}
       </div>
-      {/* <a href="https://greensock.com/"><img src="https://assets.codepen.io/16327/hero-logo.svg" className="logo" /></a> */}
     </div>
   );
 };

@@ -56,9 +56,9 @@ const Banner = () => {
       <div className="title-wrapper">
         <Title />
       </div>
-      <div className="card-hover">
+      {/* <div className="card-hover">
         <CardHover />
-      </div>
+      </div> */}
     </div>
   );
 };
