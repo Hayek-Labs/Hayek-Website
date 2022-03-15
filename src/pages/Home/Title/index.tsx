@@ -7,14 +7,14 @@ export const Title = () => {
         <h1>
           <div>
             <span>the</span>
-            STABLECOIN
+            STABLECOIN&FOREX
             <span>for</span>
           </div>
           <div>GREAT SOCIETY of FREE MEN</div>
         </h1>
         <p>
-          Pure on-chain Money, Algorithmic Stablecoin, Automatic Interest,
-          Flexible Pair, Highly Scalable
+          Pure on chain, Algorithmic Stablecoin, PERPETUAL FOREX, Flexible Pair,
+          Highly Scalable
         </p>
       </div>
     </div>
