@@ -4,12 +4,12 @@ import CardHover from '../CardHover';
 import Button from '../Button';
 import Title from '../Title';
 import styles from './index.less';
-import { ReactComponent as LogoSVG } from '@/static_assets/logos/coins/hayek-logo-white.svg';
+import { ReactComponent as LogoSVG } from '@/static_assets/logos/coins/hayek-logo-yellow.svg';
 
 const Logo = () => {
   return (
     <div className="hayek-logo">
-      <LogoSVG width="100" height="100" viewBox="0 0 512 400" />
+      <LogoSVG width="115" height="100" viewBox="0 0 1500 500" />
     </div>
   );
 };
@@ -56,9 +56,9 @@ const Banner = () => {
       <div className="title-wrapper">
         <Title />
       </div>
-      <div className="card-hover">
+      {/* <div className="card-hover">
         <CardHover />
-      </div>
+      </div> */}
     </div>
   );
 };

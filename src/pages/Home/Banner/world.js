@@ -26,7 +26,7 @@ class World {
     };
 
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color('#00101a');
+    this.scene.background = new THREE.Color('rgb(23,23,23)');
     this.clock = new THREE.Clock();
     this.data = 0;
     this.time = { current: 0, t0: 0, t1: 0, t: 0, frequency: 0.0005 };

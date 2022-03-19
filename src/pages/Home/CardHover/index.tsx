@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { FiArrowRight } from 'react-icons/fi';
+import { HiOutlineDownload } from 'react-icons/hi';
 import styles from './index.less';
 
 const CardHover = () => {
@@ -92,29 +94,26 @@ const CardHover = () => {
   }, []);
   return (
     <div className={styles.cardhover}>
-      <div id="app" className="container">
+      <div id="app" className="vue-container">
         <card data-image="">
           <h1 slot="header">Mint</h1>
-          <p slot="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <p slot="content" className="content">
+            <FiArrowRight size={38} />
+            <span className="text-2xl">USDH</span>
           </p>
         </card>
         <card data-image="">
           <h1 slot="header">Redeem</h1>
-          <p slot="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </card>
-        <card data-image="">
-          <h1 slot="header">Buyback</h1>
-          <p slot="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <p slot="content" className="content">
+            <span className="text-2xl">USDH</span>
+            <FiArrowRight size={38} />
           </p>
         </card>
         <card data-image="">
           <h1 slot="header">Staking</h1>
-          <p slot="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <p slot="content" className="content">
+            <span className="text-2xl">USDH</span>
+            <HiOutlineDownload size={32} />
           </p>
         </card>
       </div>
