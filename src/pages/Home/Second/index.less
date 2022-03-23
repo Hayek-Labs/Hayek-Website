@@ -1,6 +1,6 @@
 .second {
   position: relative;
-  background-color: rgb(30, 30, 30);
+  background-color: #e1e1e1;
   :global {
     // Images
     // @leaf-url: 'https://making-the-web.com/sites/default/files/clipart/156536/green-leaf-icon-156536-2289922.png';
@@ -80,10 +80,17 @@
         }
       }
     }
-
+    .layer-third-out {
+      .module {
+        h4 {
+          font-size: 1.2rem;
+          margin-left: 3.3rem;
+        }
+      }
+    }
     .layer-main {
       .main-title {
-        margin-left: 1em;
+        // margin-left: 1em;
       }
     }
 
@@ -256,7 +263,175 @@
         }
       }
     }
+    .module-out {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      width: @circle-radius * 7.5;
+      left: calc(50% - @circle-radius);
+      top: calc(50% - @circle-radius);
+      transform-origin: @circle-radius @circle-radius;
+      animation: spin @animation-duration linear infinite;
+      transition: transform 0.3s ease-out;
 
+      &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        position: absolute;
+        border-bottom: dotted @dot-size @color-secondary;
+        top: 50%;
+        left: @circle-radius;
+        margin-top: -@dot-size / 2;
+      }
+
+      &.pause .leaf {
+        opacity: 1;
+      }
+
+      .circle {
+        animation: spin @animation-duration linear infinite reverse;
+        pointer-events: all;
+        cursor: pointer;
+        transition: background 0.2s ease-out;
+
+        &.pause {
+          animation-play-state: paused;
+        }
+
+        &:hover {
+          background: @color-text;
+          border-color: @color-text;
+          box-shadow: 0px 10px 15px @color-bg;
+          .title,
+          .subtitle {
+            color: rgb(23, 23, 23);
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        animation-delay: -8s;
+
+        .circle {
+          animation-delay: -8s;
+        }
+      }
+
+      &:nth-child(2) {
+        animation-delay: -16s;
+
+        .circle {
+          animation-delay: -16s;
+        }
+      }
+      &:nth-child(3) {
+        animation-delay: -24s;
+
+        .circle {
+          animation-delay: -24s;
+        }
+      }
+      &:nth-child(4) {
+        animation-delay: -32s;
+
+        .circle {
+          animation-delay: -32s;
+        }
+      }
+      &:nth-child(5) {
+        animation-delay: -40s;
+
+        .circle {
+          animation-delay: -40s;
+        }
+      }
+      // @for @a from 1 to 7 {
+      //   &:nth-child(#{@a}) {
+      //     @b: @a*8;
+      //     animation-delay: -#{@b}s;
+
+      //     .circle {
+      //       animation-delay: -#{@b}s;
+      //     }
+      //   }
+      // }
+    }
+
+    .circle-out {
+      @extend .is-flex;
+      width: @circle-radius * 2;
+      height: @circle-radius * 2;
+      border-radius: 50%;
+      position: relative;
+      border: solid 3px rgb(247, 185, 28);
+      background: darken(@color-bg, 2);
+
+      &.is-main {
+        background-color: rgba(darken(@color-bg, 1), 0.95);
+        // border-width: 15px;
+        width: @circle-radius * 2.75;
+        height: @circle-radius * 2.75;
+        overflow: hidden;
+        border: solid 15px rgb(247, 185, 28);
+
+        pointer-events: all;
+        cursor: pointer;
+        transition: background 0.2s ease-out, border 0.2s ease-out;
+
+        &:before {
+          content: '';
+          // background: url(@maze-url) center;
+          background-size: 50%;
+          position: absolute;
+          animation: spin @animation-duration linear reverse infinite;
+          width: 100%;
+          height: 100%;
+          opacity: 0.25;
+          z-index: 1;
+        }
+
+        .title,
+        .subtitle {
+          position: relative;
+          z-index: 2;
+        }
+
+        .subtitle {
+          margin-top: -1em;
+        }
+
+        &:hover {
+          background-color: @color-text;
+          border-color: @color-text;
+
+          .title,
+          .subtitle {
+            color: rgb(23, 23, 23);
+          }
+        }
+      }
+
+      &.is-second {
+        background: none;
+        border: dotted 1px @color-secondary;
+        width: @circle-radius * 6;
+        height: @circle-radius * 6;
+      }
+
+      &.is-third {
+        background: none;
+        border: dashed 5px darken(@color-text, 60);
+        width: @circle-radius * 7;
+        height: @circle-radius * 7;
+        transition: border-color 0.2s ease-out;
+        animation: spin @animation-duration*4 linear infinite reverse;
+
+        .pause & {
+          border-color: @color-accent;
+        }
+      }
+    }
     .leaf {
       position: absolute;
       width: 3em;
