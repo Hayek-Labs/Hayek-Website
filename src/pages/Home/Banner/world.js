@@ -78,7 +78,7 @@ class World {
 
     this.time.elapsed = this.clock.getElapsedTime();
     this.time.delta =
-      Math.min(60, (this.time.current - this.time.elapsed) * 1000) *
+      Math.min(0, (this.time.current - this.time.elapsed) * 1000) *
       animationSpeedFactor;
 
     if (this.analyser && this.isRunning) {
@@ -208,7 +208,16 @@ class World {
     const phis = new Float32Array(count);
     const randoms = new Float32Array(count);
     const randoms1 = new Float32Array(count);
-    const colorChoices = ['pink', 'green', 'cyan', 'wheat', 'red'];
+    // doctor colors edit
+    const colorChoices = [
+      'rgb(239,68,68)',
+      'rgb(16,185,129)',
+      'rgb(47, 73, 209)',
+      'rgb(247, 185, 28)',
+      'rgb(53, 53, 53)',
+      'rgb(30,30,30)',
+      'rgb(23,23,23)',
+    ];
 
     const squareGeometry = new THREE.PlaneGeometry(1, 1);
     this.instancedGeometry = new THREE.InstancedBufferGeometry();

@@ -4,7 +4,7 @@ export const Title = () => {
   return (
     <div className={styles['title-wrapper']}>
       <div className="title">
-        <h1>
+        {/* <h1>
           <div>
             <span>the</span>
             STABLECOIN&FOREX
@@ -15,7 +15,8 @@ export const Title = () => {
         <p>
           Pure on chain, Algorithmic Stablecoin, PERPETUAL FOREX, Flexible Pair,
           Highly Scalable
-        </p>
+        </p> */}
+        <h1>ALGORITHMIC STABLECOIN & FOREX EXCHANGE PROTOCOL</h1>
       </div>
     </div>
   );

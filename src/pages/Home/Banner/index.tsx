@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import Slinky from '../Slinky';
 import World from './world';
 import CardHover from '../CardHover';
 import Button from '../Button';
@@ -16,21 +17,21 @@ const Logo = () => {
 const GoStarted = () => {
   return (
     <a target="_blank" href="https://app.hayek.tech/">
-      <div className="gostarted">GET STARTED</div>
+      <div className="gostarted">EXCHANGE</div>
     </a>
   );
 };
 const Banner = () => {
-  useEffect(() => {
-    const world = new World({
-      canvas: document.querySelector('canvas.webgl'),
-      cameraPosition: { x: 0, y: 0, z: 4.5 },
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+  // useEffect(() => {
+  //   const world = new World({
+  //     canvas: document.querySelector('canvas.webgl'),
+  //     cameraPosition: { x: 0, y: 0, z: 4.5 },
+  //     width: window.innerWidth,
+  //     height: window.innerHeight,
+  //   });
 
-    world.loop();
-  }, []);
+  //   world.loop();
+  // }, []);
 
   const startBtnRef = useRef<HTMLButtonElement>(undefined!);
   useEffect(() => {
@@ -39,7 +40,9 @@ const Banner = () => {
 
   return (
     <div className={styles.banner}>
-      <canvas className="webgl"></canvas>
+      {/* <canvas className="webgl"></canvas> */}
+
+      <Slinky />
       <Logo />
       <GoStarted />
       <Button
