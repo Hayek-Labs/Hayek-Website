@@ -13,7 +13,7 @@ const Second = () => {
         ),
       )
       .to('.slinky', 4, { y: -455, ease: Power0.easeNone }, 0)
-      .timeScale(1.1);
+      .timeScale(1);
   }, []);
   return (
     <div className={styles.second}>

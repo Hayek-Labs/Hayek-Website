@@ -17,7 +17,7 @@ const Logo = () => {
 const GoStarted = () => {
   return (
     <a target="_blank" href="https://app.hayek.tech/">
-      <div className="gostarted">EXCHANGE</div>
+      <div className="gostarted">GET STARTED</div>
     </a>
   );
 };
@@ -62,6 +62,26 @@ const Banner = () => {
       {/* <div className="card-hover">
         <CardHover />
       </div> */}
+      <div className="btn">
+        <a href="#" target="_blank" title="">
+          WhitePaper
+        </a>
+        <a href="#" target="_blank" title="">
+          Github
+        </a>
+        <a href="#" target="_blank" title="">
+          Twitter
+        </a>
+        <a href="#" target="_blank" title="">
+          Discord
+        </a>
+        <a href="#" target="_blank" title="">
+          Telegram
+        </a>
+        <a href="#" target="_blank" title="">
+          Youtube
+        </a>
+      </div>
     </div>
   );
 };

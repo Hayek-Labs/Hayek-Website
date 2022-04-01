@@ -5,6 +5,9 @@ import { FaMedium } from 'react-icons/fa';
 import { FiYoutube } from 'react-icons/fi';
 import { IconContext } from 'react-icons';
 import { FiTwitter } from 'react-icons/fi';
+import { ReactComponent as Github } from './github.svg';
+import { ReactComponent as Twitter } from './twitter.svg';
+import { ReactComponent as Youtube } from './youtube.svg';
 
 const Footer = () => {
   return (
@@ -21,7 +24,7 @@ const Footer = () => {
                       value={{ size: '25px', className: 'telegramicon' }}
                     >
                       <div>
-                        <FaTelegram />
+                        <Github style={{ width: '40px', height: '40px' }} />
                       </div>
                     </IconContext.Provider>
                   </a>
@@ -33,7 +36,7 @@ const Footer = () => {
                       value={{ size: '25px', className: 'twittericon' }}
                     >
                       <div>
-                        <FiTwitter />
+                        <Twitter style={{ width: '40px', height: '40px' }} />
                       </div>
                     </IconContext.Provider>
                   </a>
@@ -45,19 +48,7 @@ const Footer = () => {
                       value={{ size: '25px', className: 'mediumicon' }}
                     >
                       <div>
-                        <FaMedium />
-                      </div>
-                    </IconContext.Provider>
-                  </a>
-                </li>
-                <li>
-                  <a className="linkedin" href="#">
-                    {/* <i className="fa fa-linkedin"></i> */}
-                    <IconContext.Provider
-                      value={{ size: '25px', className: 'youtubeicon' }}
-                    >
-                      <div>
-                        <FiYoutube />
+                        <Youtube style={{ width: '40px', height: '40px' }} />
                       </div>
                     </IconContext.Provider>
                   </a>

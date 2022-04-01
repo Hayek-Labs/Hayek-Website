@@ -25,7 +25,7 @@ export default function IndexPage() {
       {/* <TimeLine />
       <TableUi /> */}
       {/* <TextFillingWithWater /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

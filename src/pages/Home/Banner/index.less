@@ -7,7 +7,7 @@
 
     .gostarted {
       position: absolute;
-      width: 135px;
+      width: 145px;
       text-align: center;
       display: inline-block;
       text-decoration: none;
@@ -28,6 +28,7 @@
       &:hover {
         cursor: pointer;
         text-indent: 30px;
+
         &::before {
           transform: scale(1, 1);
           text-indent: 0;
@@ -58,6 +59,48 @@
       position: absolute;
       top: -10px;
       left: 6%;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 1.35rem;
+      right: 0;
+      a {
+        margin: auto 15px;
+        text-decoration: none;
+        color: #7a7a8c;
+        font-size: 0.675rem;
+        position: relative;
+        &::before {
+          left: 0;
+          content: '';
+          border-bottom: solid 1px white;
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          transition: all 0.2s ease;
+        }
+        &:hover::before {
+          width: 50%;
+        }
+        &::after {
+          right: 0;
+          content: '';
+          border-bottom: solid 1px white;
+          position: absolute;
+          bottom: 0;
+          width: 0;
+          transition: all 0.2s ease;
+        }
+        &:hover::after {
+          width: 50%;
+        }
+        // &:hover{
+        //  &::after,&::before{
+        //   width: 50%;
+        //  }
+        // }
+      }
     }
 
     .button {

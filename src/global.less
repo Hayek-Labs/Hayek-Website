@@ -7,11 +7,22 @@ html {
   overflow: hidden;
 }
 body {
-  background-color: #0e0304;
+  // background-color: #070304;
+  background: radial-gradient(#4c4f5a 6%, transparent 6%), #18191c;
+  background-size: 25px 25px;
 }
 @font-face {
   font-family: FontAwesome;
   src: url(/fa-solid-900.woff);
+}
+
+@keyframes animate-logo {
+  0% {
+    background-position: 0 3200px;
+  }
+  100% {
+    background-position: 3200px 0;
+  }
 }
 @keyframes wave-animation {
   0% {

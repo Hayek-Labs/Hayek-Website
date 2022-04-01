@@ -16,7 +16,8 @@ export const Title = () => {
           Pure on chain, Algorithmic Stablecoin, PERPETUAL FOREX, Flexible Pair,
           Highly Scalable
         </p> */}
-        <h1>ALGORITHMIC STABLECOIN & FOREX EXCHANGE PROTOCOL</h1>
+        <div className={'logos'}>USDH</div>
+        <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1>
       </div>
     </div>
   );
