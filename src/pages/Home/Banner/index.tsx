@@ -63,24 +63,28 @@ const Banner = () => {
         <CardHover />
       </div> */}
       <div className="btn">
-        <a href="#" target="_blank" title="">
-          WhitePaper
-        </a>
-        <a href="#" target="_blank" title="">
-          Github
-        </a>
-        <a href="#" target="_blank" title="">
-          Twitter
-        </a>
-        <a href="#" target="_blank" title="">
-          Discord
-        </a>
-        <a href="#" target="_blank" title="">
-          Telegram
-        </a>
-        <a href="#" target="_blank" title="">
-          Youtube
-        </a>
+        <div>
+          <a href="#" target="_blank" title="">
+            WhitePaper
+          </a>
+          <a href="#" target="_blank" title="">
+            Github
+          </a>
+          <a href="#" target="_blank" title="">
+            Twitter
+          </a>
+        </div>
+        <div>
+          <a href="#" target="_blank" title="">
+            Discord
+          </a>
+          <a href="#" target="_blank" title="">
+            Telegram
+          </a>
+          <a href="#" target="_blank" title="">
+            Youtube
+          </a>
+        </div>
       </div>
     </div>
   );

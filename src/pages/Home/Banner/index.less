@@ -15,7 +15,6 @@
       top: 20px;
       right: 100px;
       text-transform: capitalize;
-      font-family: 'Roboto', sans-serif;
       font-size: 16px;
       padding: 10px 0px;
       border-radius: 6px;
@@ -37,7 +36,6 @@
 
       &::before {
         content: '';
-        font-family: FontAwesome;
         font-size: 14px;
         display: flex;
         align-items: center;
@@ -54,11 +52,14 @@
         transition: all 0.2s linear 0s;
       }
     }
+
     @media (max-width: 600px) {
       .gostarted {
         right: 30px;
+        opacity: 0.85;
       }
     }
+
     .hayek-logo {
       position: absolute;
       top: -10px;
@@ -67,17 +68,23 @@
 
     .btn {
       position: absolute;
-      bottom: 1.35rem;
+      bottom: 0;
       right: 0;
+      height: 35px;
+      div {
+        display: inline-block;
+      }
       a {
         margin: auto 15px;
         text-decoration: none;
         color: #7a7a8c;
         font-size: 0.675rem;
         position: relative;
+
         &:hover {
           color: #ffffff;
         }
+
         &::before {
           left: 0;
           content: '';
@@ -87,9 +94,11 @@
           width: 0;
           transition: all 0.2s ease;
         }
+
         &:hover::before {
           width: 50%;
         }
+
         &::after {
           right: 0;
           content: '';
@@ -99,9 +108,11 @@
           width: 0;
           transition: all 0.2s ease;
         }
+
         &:hover::after {
           width: 50%;
         }
+
         // &:hover{
         //  &::after,&::before{
         //   width: 50%;
@@ -109,7 +120,14 @@
         // }
       }
     }
-
+    @media (max-width: 600px) {
+      .btn {
+        height: 50px;
+        div {
+          display: block;
+        }
+      }
+    }
     .button {
       display: none;
 
