@@ -1,5 +1,13 @@
 import styles from './index.less';
 
+const OtherCoins: React.FC<{ isInvisible?: boolean }> = ({ isInvisible }) => {
+  return (
+    <span className={`coin-titles${isInvisible ? ' invisible' : ''}`}>
+      EURH, GBPH, JPYH...
+    </span>
+  );
+};
+
 export const Title = () => {
   return (
     <div className={styles['title-wrapper']}>
@@ -16,7 +24,11 @@ export const Title = () => {
           Pure on chain, Algorithmic Stablecoin, PERPETUAL FOREX, Flexible Pair,
           Highly Scalable
         </p> */}
-        <div className={'logos'}>USDH</div>
+        <div className="logos">
+          <OtherCoins isInvisible={true} />
+          <span>USDH</span>
+          <OtherCoins />
+        </div>
         <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1>
       </div>
     </div>
