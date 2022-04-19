@@ -29,7 +29,11 @@ export const Title = () => {
           <span>USDH</span>
           <OtherCoins />
         </div>
-        <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1>
+        {/* <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1> */}
+        <h2>
+          Hayek protocol provides a set of highly scalable, decentralized,
+          algorithmic stablecoins for web 3.0.
+        </h2>
       </div>
     </div>
   );
