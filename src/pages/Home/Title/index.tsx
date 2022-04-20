@@ -25,9 +25,12 @@ export const Title = () => {
           Highly Scalable
         </p> */}
         <div className="logos">
-          <OtherCoins isInvisible={true} />
-          <span>USDH</span>
-          <OtherCoins />
+          {/* <OtherCoins isInvisible={true} /> */}
+          <span className={styles.bigt}>
+            USDH<span className={styles.smallt}>EURH, GBPH, JPYH...</span>
+          </span>
+
+          {/* <OtherCoins /> */}
         </div>
         {/* <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1> */}
         <h2>

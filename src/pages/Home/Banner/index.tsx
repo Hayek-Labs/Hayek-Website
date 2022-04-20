@@ -64,24 +64,32 @@ const Banner = () => {
       </div> */}
       <div className="btn">
         <div>
-          <a href="#" target="_blank" title="">
+          <a
+            href="https://docs.google.com/document/d/1jAYz02Y6Ewa6Urrg1nvqBmPafsA-nn5NsZe4_9pUHE8/edit?usp=sharing"
+            target="_blank"
+            title=""
+          >
             WhitePaper
           </a>
-          <a href="#" target="_blank" title="">
+          <a href="https://github.com/Hayek-Labs" target="_blank" title="">
             Github
           </a>
-          <a href="#" target="_blank" title="">
+          <a href="https://twitter.com/hayek_tech/" target="_blank" title="">
             Twitter
           </a>
         </div>
         <div>
-          <a href="#" target="_blank" title="">
+          <a href="https://discord.gg/HyuDJ3Juu6" target="_blank" title="">
             Discord
           </a>
-          <a href="#" target="_blank" title="">
+          <a href="https://t.me/HayekTech_Official" target="_blank" title="">
             Telegram
           </a>
-          <a href="#" target="_blank" title="">
+          <a
+            href="https://www.youtube.com/channel/UCBAluStWnlo0S9QI5Hi602w"
+            target="_blank"
+            title=""
+          >
             Youtube
           </a>
         </div>
