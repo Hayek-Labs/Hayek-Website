@@ -82,6 +82,13 @@ const Banner = () => {
           <a href="https://discord.gg/HyuDJ3Juu6" target="_blank" title="">
             Discord
           </a>
+          <a
+            href="https://medium.com/@Hayek_Technology"
+            target="_blank"
+            title=""
+          >
+            Medium
+          </a>
           <a href="https://t.me/HayekTech_Official" target="_blank" title="">
             Telegram
           </a>
