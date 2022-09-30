@@ -1,5 +1,5 @@
 import styles from './index.less';
-
+import { ReactComponent as USDH } from '@/static_assets/logos/coins/white.svg';
 const OtherCoins: React.FC<{ isInvisible?: boolean }> = ({ isInvisible }) => {
   return (
     <span className={`coin-titles${isInvisible ? ' invisible' : ''}`}>
@@ -27,16 +27,14 @@ export const Title = () => {
         <div className="logos">
           {/* <OtherCoins isInvisible={true} /> */}
           <span className={styles.bigt}>
-            USDH<span className={styles.smallt}>EURH, GBPH, JPYH...</span>
+            <span className="iconfont">&#xe653;</span> USDH
+            {/* <span className={styles.smallt}>EURH, GBPH, JPYH...</span> */}
           </span>
 
           {/* <OtherCoins /> */}
         </div>
         {/* <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1> */}
-        <h2>
-          Hayek protocol provides a set of highly scalable, decentralized,
-          algorithmic stablecoins for web 3.0.
-        </h2>
+        <h2>Hayek Tech designs the world’s decentralized stablecoin USDH.</h2>
       </div>
     </div>
   );
