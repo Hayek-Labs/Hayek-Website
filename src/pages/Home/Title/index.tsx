@@ -27,7 +27,10 @@ export const Title = () => {
         <div className="logos">
           {/* <OtherCoins isInvisible={true} /> */}
           <span className={styles.bigt}>
-            <span className="iconfont">&#xe653;</span> USDH
+            <span style={{ verticalAlign: '-0.05em' }} className="iconfont">
+              &#xe653;
+            </span>{' '}
+            USDH
             {/* <span className={styles.smallt}>EURH, GBPH, JPYH...</span> */}
           </span>
 
