@@ -59946,12 +59946,6 @@
                   Object(v['jsxs'])('div', {
                     children: [
                       Object(v['jsx'])('a', {
-                        href: 'https://discord.gg/HyuDJ3Juu6',
-                        target: '_blank',
-                        title: '',
-                        children: 'Discord',
-                      }),
-                      Object(v['jsx'])('a', {
                         href: 'https://medium.com/@Hayek_Technology',
                         target: '_blank',
                         title: '',
