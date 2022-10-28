@@ -59924,10 +59924,10 @@
                   Object(v['jsxs'])('div', {
                     children: [
                       Object(v['jsx'])('a', {
-                        href: 'https://docs.google.com/document/d/1jAYz02Y6Ewa6Urrg1nvqBmPafsA-nn5NsZe4_9pUHE8/edit?usp=sharing',
+                        href: 'https://hayek-tech.gitbook.io/hayek/',
                         target: '_blank',
                         title: '',
-                        children: 'WhitePaper',
+                        children: 'Gitbook',
                       }),
                       Object(v['jsx'])('a', {
                         href: 'https://github.com/Hayek-Labs',

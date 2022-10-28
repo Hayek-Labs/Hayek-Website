@@ -65,11 +65,11 @@ const Banner = () => {
       <div className="btn">
         <div>
           <a
-            href="https://docs.google.com/document/d/1jAYz02Y6Ewa6Urrg1nvqBmPafsA-nn5NsZe4_9pUHE8/edit?usp=sharing"
+            href="https://hayek-tech.gitbook.io/hayek/"
             target="_blank"
             title=""
           >
-            WhitePaper
+            Gitbook
           </a>
           <a href="https://github.com/Hayek-Labs" target="_blank" title="">
             Github
