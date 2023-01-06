@@ -5,15 +5,7 @@ import CardHover from '../CardHover';
 import Button from '../Button';
 import Title from '../Title';
 import styles from './index.less';
-import { ReactComponent as LogoSVG } from '@/static_assets/logos/coins/hayek-logo-yellow.svg';
-
-const Logo = () => {
-  return (
-    <div className="hayek-logo">
-      <LogoSVG width="115" height="100" viewBox="0 0 1500 500" />
-    </div>
-  );
-};
+import Logo from '@/static_assets/logos/coins/hayek-logo-yellow.svg';
 const GoStarted = () => {
   return (
     <a target="_blank" href="https://app.hayek.tech/">
@@ -43,7 +35,10 @@ const Banner = () => {
       {/* <canvas className="webgl"></canvas> */}
 
       <Slinky />
-      <Logo />
+      <div className="hayek-logo">
+        <img width={115} src={Logo} />
+      </div>
+
       <GoStarted />
       <Button
         render={

@@ -13691,6 +13691,9 @@
       },
     );
   },
+  TGp4: function (e, t, n) {
+    e.exports = n.p + 'static/hayek-logo-yellow.06498fbf.svg';
+  },
   TJ79: function (e, t, n) {
     var r = n('I+eb'),
       o = n('P940');
@@ -59626,23 +59629,14 @@
     'use strict';
     n.r(t),
       n.d(t, 'default', function () {
-        return L;
+        return k;
       });
-    var r,
-      o,
-      i,
-      a,
-      u,
-      c,
-      s,
-      l,
-      f = n('q1tI'),
-      p = n.n(f),
-      d = n('s++h'),
-      h = n.n(d),
-      v = n('nKUr'),
-      y = () => (
-        Object(f['useLayoutEffect'])(() => {
+    var r = n('q1tI'),
+      o = n('s++h'),
+      i = n.n(o),
+      a = n('nKUr'),
+      u = () => (
+        Object(r['useLayoutEffect'])(() => {
           new TimelineMax({ repeat: -1 })
             .add(
               TweenMax.staggerTo(
@@ -59659,100 +59653,100 @@
             .to('.slinky', 4, { y: -455, ease: Power0.easeNone }, 0)
             .timeScale(1);
         }, []),
-        Object(v['jsx'])('div', {
-          className: h.a.second,
-          children: Object(v['jsx'])('div', {
+        Object(a['jsx'])('div', {
+          className: i.a.second,
+          children: Object(a['jsx'])('div', {
             className: 'container',
-            children: Object(v['jsxs'])('div', {
+            children: Object(a['jsxs'])('div', {
               className: 'slinky',
               children: [
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
-                Object(v['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
+                Object(a['jsx'])('div', { className: 'slink' }),
               ],
             }),
           }),
         })
       ),
-      g = y,
-      m = n('mE8f'),
-      b = n.n(m),
-      x = (e) => {
+      c = u,
+      s = n('mE8f'),
+      l = n.n(s),
+      f = (e) => {
         var t = e.render;
-        return Object(v['jsx'])('span', { className: b.a.button, children: t });
+        return Object(a['jsx'])('span', { className: l.a.button, children: t });
       },
-      w = x,
-      O = n('Xrcy'),
-      j = n.n(O),
-      k = () =>
-        Object(v['jsx'])('div', {
-          className: j.a['title-wrapper'],
-          children: Object(v['jsxs'])('div', {
+      p = f,
+      d = n('Xrcy'),
+      h = n.n(d),
+      v = () =>
+        Object(a['jsx'])('div', {
+          className: h.a['title-wrapper'],
+          children: Object(a['jsxs'])('div', {
             className: 'title',
             children: [
-              Object(v['jsx'])('div', {
+              Object(a['jsx'])('div', {
                 className: 'logos',
-                children: Object(v['jsxs'])('span', {
-                  className: j.a.bigt,
+                children: Object(a['jsxs'])('span', {
+                  className: h.a.bigt,
                   children: [
-                    Object(v['jsx'])('span', {
+                    Object(a['jsx'])('span', {
                       style: { verticalAlign: '-0.05em' },
                       className: 'iconfont',
                       children: '\ue653',
@@ -59762,180 +59756,72 @@
                   ],
                 }),
               }),
-              Object(v['jsx'])('h2', {
+              Object(a['jsx'])('h2', {
                 children:
                   'Hayek Tech designs the world\u2019s decentralized stablecoin USDH.',
               }),
             ],
           }),
         }),
-      E = k,
-      S = n('1yYR'),
-      _ = n.n(S);
-    function C() {
-      return (
-        (C =
-          Object.assign ||
-          function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-              var n = arguments[t];
-              for (var r in n)
-                Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
-            }
-            return e;
-          }),
-        C.apply(this, arguments)
-      );
-    }
-    function A(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = P(e, t);
-      if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++)
-          (n = i[r]),
-            t.indexOf(n) >= 0 ||
-              (Object.prototype.propertyIsEnumerable.call(e, n) &&
-                (o[n] = e[n]));
-      }
-      return o;
-    }
-    function P(e, t) {
-      if (null == e) return {};
-      var n,
-        r,
-        o = {},
-        i = Object.keys(e);
-      for (r = 0; r < i.length; r++)
-        (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-      return o;
-    }
-    var M = function (e) {
-        var t = e.svgRef,
-          n = e.title,
-          f = A(e, ['svgRef', 'title']);
-        return p.a.createElement(
-          'svg',
-          C(
-            {
-              id: '\\u56FE\\u5C42_1',
-              'data-name': '\\u56FE\\u5C42 1',
-              viewBox: '0 0 1500 500',
-              ref: t,
-            },
-            f,
-          ),
-          n ? p.a.createElement('title', null, n) : null,
-          r ||
-            (r = p.a.createElement(
-              'defs',
-              null,
-              p.a.createElement('style', null, '.cls-1{fill:#f7b91c;}'),
-            )),
-          o ||
-            (o = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M100,333.33h9.45q6.51,0,9.28-2.93T121.5,321V182.15q0-6.18-2.77-9t-9.28-2.77H100V146.31h75.92v24.11h-8.15c-4.13,0-7.12.93-9,2.77s-2.77,4.84-2.77,9V239.5h88.62v-57q0-6.51-2.6-9.29c-1.74-1.84-4.78-2.77-9.13-2.77h-8.47V146.31h76.25v24.11h-9.45q-6.52,0-9.29,2.77t-2.77,9V321q0,6.53,2.77,9.45t9.29,2.93h9.45v23.79H224.46V333.33h8.47c4.13,0,7.12-1,9-2.93s2.77-5.1,2.77-9.45V263.28H156V321q0,6.53,2.77,9.45c1.84,2,4.83,2.93,9,2.93h8.15v23.79H100Z',
-            })),
-          i ||
-            (i = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M314.06,333.33h10.1q7.5,0,11.57-2.6t6.35-9.13l62.24-175.29h32.9L498.8,321.6q2.28,6.52,6.52,9.13t11.73,2.6h9.77v23.79H452.54V333.33h16.29l-14.34-41.7H386.72l-14.33,41.7h16.29v23.79H314.06ZM448,271.1l-27.05-79.5-27.69,79.5Z',
-            })),
-          a ||
-            (a = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M550.93,333.66h7.5q6.51,0,9.28-2.93t2.77-9.13V279.9L517.7,182.8q-4.23-7.49-8.47-10.26c-2.83-1.84-6.84-2.77-12.06-2.77h-7.49V146.31h71v23.46h-4.56c-4.78,0-7.17,1.42-7.17,4.24q0,2.93,2.61,7.49l36.16,70.05,35.84-70.05a16.23,16.23,0,0,0,2.28-7.49c0-2.82-2.28-4.24-6.84-4.24h-4.89V146.31h71v23.46h-7.49c-5.21,0-9.24.93-12.06,2.77s-5.65,5.27-8.47,10.26l-52.46,97.1v41.7q0,6.19,2.94,9.13t9.12,2.93h7.49v23.46H550.93Z',
-            })),
-          u ||
-            (u = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M701.78,333.33h9.45q6.53,0,9.29-2.93t2.77-9.45V182.15c0-4.12-.93-7.11-2.77-9s-4.94-2.77-9.29-2.77h-9.45V146.31H857.85v42H826.57v-6.51c0-4.13-1-7.12-2.93-9s-5.1-2.77-9.45-2.77H757.83v69.4h56.36v24.11H757.83v69.72h56.36q6.52,0,9.45-2.77t2.93-9.28v-6.52h31.28v42.36H701.78Z',
-            })),
-          c ||
-            (c = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M879.36,333h9.45q6.51,0,9.28-2.77c1.84-1.85,2.77-4.83,2.77-9V181.83c0-4.13-.93-7.12-2.77-9s-4.94-2.77-9.28-2.77h-7.5V146.31H952V170.1h-5.86c-3.91,0-6.68,1-8.31,2.93s-2.44,4.89-2.44,8.8V250.9l75.26-80.8H994V146.31h71.69V171.4h-12.06q-6.2,0-9.78,2a34.49,34.49,0,0,0-8.14,6.84L983,235.91l57.67,87.32a24.31,24.31,0,0,0,7.49,7.5,19.87,19.87,0,0,0,10.1,2.28H1069v24.11H994V333h18.25l-49.85-75.59-27,29v34.87q0,5.87,2.44,8.79c1.63,2,4.61,2.94,9,2.94H954v24.11H879.36Z',
-            })),
-          s ||
-            (s = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M1149.24,228.13H1400V144.55h-78.66a4.93,4.93,0,0,1-4.93-4.93V102.91h-83.58v36.71a4.93,4.93,0,0,1-4.93,4.93h-78.66Z',
-            })),
-          l ||
-            (l = p.a.createElement('path', {
-              className: 'cls-1',
-              d: 'M1400,271.87H1149.24v83.58h78.66a4.93,4.93,0,0,1,4.93,4.93v36.71h83.58V360.38a4.94,4.94,0,0,1,4.94-4.93H1400Z',
-            })),
-        );
-      },
-      T = p.a.forwardRef(function (e, t) {
-        return p.a.createElement(M, C({ svgRef: t }, e));
-      }),
-      N =
-        (n.p,
-        () =>
-          Object(v['jsx'])('div', {
-            className: 'hayek-logo',
-            children: Object(v['jsx'])(T, {
-              width: '115',
-              height: '100',
-              viewBox: '0 0 1500 500',
-            }),
-          })),
-      I = () =>
-        Object(v['jsx'])('a', {
+      y = v,
+      g = n('1yYR'),
+      m = n.n(g),
+      b = n('TGp4'),
+      x = n.n(b),
+      w = () =>
+        Object(a['jsx'])('a', {
           target: '_blank',
           href: 'https://app.hayek.tech/',
-          children: Object(v['jsx'])('div', {
+          children: Object(a['jsx'])('div', {
             className: 'gostarted',
             children: 'GET STARTED',
           }),
         }),
-      R = () => {
-        var e = Object(f['useRef'])(void 0);
+      O = () => {
+        var e = Object(r['useRef'])(void 0);
         return (
-          Object(f['useEffect'])(() => {
+          Object(r['useEffect'])(() => {
             e.current.click();
           }, []),
-          Object(v['jsxs'])('div', {
-            className: _.a.banner,
+          Object(a['jsxs'])('div', {
+            className: m.a.banner,
             children: [
-              Object(v['jsx'])(g, {}),
-              Object(v['jsx'])(N, {}),
-              Object(v['jsx'])(I, {}),
-              Object(v['jsx'])(w, {
-                render: Object(v['jsx'])('button', {
+              Object(a['jsx'])(c, {}),
+              Object(a['jsx'])('div', {
+                className: 'hayek-logo',
+                children: Object(a['jsx'])('img', { width: 115, src: x.a }),
+              }),
+              Object(a['jsx'])(w, {}),
+              Object(a['jsx'])(p, {
+                render: Object(a['jsx'])('button', {
                   id: 'play-music',
                   className: 'button effect effect-2 w-m',
                   ref: e,
                   children: 'Start',
                 }),
               }),
-              Object(v['jsx'])('div', {
+              Object(a['jsx'])('div', {
                 className: 'title-wrapper',
-                children: Object(v['jsx'])(E, {}),
+                children: Object(a['jsx'])(y, {}),
               }),
-              Object(v['jsxs'])('div', {
+              Object(a['jsxs'])('div', {
                 className: 'btn',
                 children: [
-                  Object(v['jsxs'])('div', {
+                  Object(a['jsxs'])('div', {
                     children: [
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://hayek-tech.gitbook.io/hayek/',
                         target: '_blank',
                         title: '',
                         children: 'Gitbook',
                       }),
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://github.com/Hayek-Labs',
                         target: '_blank',
                         title: '',
                         children: 'Github',
                       }),
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://twitter.com/hayek_tech/',
                         target: '_blank',
                         title: '',
@@ -59943,21 +59829,21 @@
                       }),
                     ],
                   }),
-                  Object(v['jsxs'])('div', {
+                  Object(a['jsxs'])('div', {
                     children: [
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://medium.com/@Hayek_Technology',
                         target: '_blank',
                         title: '',
                         children: 'Medium',
                       }),
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://t.me/HayekTech_Official',
                         target: '_blank',
                         title: '',
                         children: 'Telegram',
                       }),
-                      Object(v['jsx'])('a', {
+                      Object(a['jsx'])('a', {
                         href: 'https://www.youtube.com/channel/UCBAluStWnlo0S9QI5Hi602w',
                         target: '_blank',
                         title: '',
@@ -59971,9 +59857,9 @@
           })
         );
       },
-      D = R;
-    function L() {
-      return Object(v['jsx'])('div', { children: Object(v['jsx'])(D, {}) });
+      j = O;
+    function k() {
+      return Object(a['jsx'])('div', { children: Object(a['jsx'])(j, {}) });
     }
   },
   ycFn: function (e, t, n) {
