@@ -37,7 +37,10 @@ export const Title = () => {
           {/* <OtherCoins /> */}
         </div>
         {/* <h1>ALGORITHMIC STABLECOIN PROTOCOL</h1> */}
-        <h2>Hayek Tech designs the world’s decentralized stablecoin USDH.</h2>
+        <h2>
+          Hayek Tech designs the BTC and ETH based decentralized stablecoin
+          USDH.
+        </h2>
       </div>
     </div>
   );
